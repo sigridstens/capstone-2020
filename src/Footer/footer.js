@@ -5,7 +5,7 @@ import '../App.css';
 function Footer() {
     return(
         <footer>
-            <p>Copyright © 2020 Sigrid Stensvold | All rights reserved.</p>
+            <p>Copyright 2020 | All rights reserved to Museum of Lost Experiences</p>
         </footer>
     )
 }

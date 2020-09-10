@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+/* Apply a natural box layout model to all elements, but allowing components to change
+Credit: Paul Irish
+ */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Global Styles */
+:root {
+    --red: #eb4827;
+    --yellow: #ddd413;
+    --blue: #0387c8;
+    --pink: #f5dbd9;
+    --darkgreen: #264d3b;
+    --black: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: Arial, sans-serif;
+    letter-spacing: .025em;
+    font-size: 1em;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.background{
+    width: 150%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    text-decoration: none;
+    color: var(--black);
+    border-bottom: 2px solid var(--yellow);
+    font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Header Section Styles */
+header {
+    width: 100%;
+    padding: 3em 4em 1em 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    border-bottom: none;
+    width: fit-content;
+    padding: 0;
+}
+
+header h1, header h2 {
+    color: var(--black);
+}
+
+header h1 {
+    font-size: 1.75em;
+    margin: .25em .25em ;
+}
+
+header h2 {
+    font-size: 1.25em;
+    margin: .25em .3em;
+}
+
+header .main-nav ul {
+    list-style-type: none;
+    color: var(--black);
+    font-weight: bold;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .main-nav ul li {
+    position: relative;
+    margin: .5em 1em;
+}
+
+header .main-nav ul ul {
+    flex-direction: column;
+    display: none;
+}
+
+
+header .main-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -.5em;
+    left: 0;
+    background-color: var(--yellow);
+}
+
+header .main-nav a:hover::after {
+    visibility: visible;
+    width: 100%;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+header a.main-nav-active-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -.5em;
+    left: 0;
+    background-color: var(--yellow);
+    z-index: 100;
+}
+
+
+.logo h1, .logo h2 {
+    width: fit-content;
+}
+
+
+/* Home Page Component Styles */
+
+
+
+/* Main Component Styles */
+main {
+    width: 80%;
+    z-index: 10;
+    margin: 5% auto;
+}
+
+.col-container {
+    display: flex;
+
+}
+
+.col {
+    margin: 3%;
+}
+
+.col-one {
+    flex-basis: 50%;
+}
+
+
+.col-two {
+    flex-basis: 50%
+}
+
+
+/* About Component Styles*/
+
+
+
+
+
+
+
+/* Footer Component Styles */
+footer {
+    text-align: center;
+    padding: 0 0 1em 0;
+    width: 100%;
 }

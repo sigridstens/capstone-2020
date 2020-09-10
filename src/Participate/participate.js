@@ -2,12 +2,12 @@ import React from 'react';
 import '../App.css';
 
 
-function About() {
+function Participate() {
     return(
         <main>
-            <h1>About the Project</h1>
+            <h1>Participate</h1>
         </main>
     )
 }
 
-export default About;
+export default Participate;

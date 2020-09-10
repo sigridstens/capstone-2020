@@ -11,16 +11,6 @@ const Navigation = (props) => {
         setRoute(props.location.pathname);
     }, [props.location]);
 
-    /*useEffect(() => {
-        return ((!typeof window !=== 'object'));
-
-        const handleResize = () => {
-            setWindowSize(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);*/
 
     const showNav = () => {
         return (
@@ -33,35 +23,27 @@ const Navigation = (props) => {
                 <nav className="main-nav">
                     <ul>
                         <li>
-                            <Link to="/" className={`${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>placeholder</Link>
+                            <Link to="/" className={`${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Navigation</Link>
                             <ul>
                                 <li>
-                                    <Link to="/">Graphic Design</Link>
+                                    <Link to="/">Sub-link 1</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/">Illustration</Link>
+                                    <Link to="/">Sub-link 2</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/">Motion Design</Link>
-                                </li>
-
-                                <li>
-                                    <Link to="/">Painting</Link>
-                                </li>
-
-                                <li>
-                                    <Link to="/">Web Development</Link>
+                                    <Link to="/">Sub-link 3</Link>
                                 </li>
 
                             </ul>
                         </li>
                         <li>
-                            <Link to="/resume" className={`${route === '/home' ? 'main-nav-active-link' : ''}`}>Home</Link>
+                            <Link to="/participate" className={`${route === '/participate' ? 'main-nav-active-link' : ''}`}>How to Participate</Link>
                         </li>
                         <li>
-                            <Link to="/about" className={`${route === '/about' ? 'main-nav-active-link' : ''}`}>About Me</Link>
+                            <Link to="/about" className={`${route === '/about' ? 'main-nav-active-link' : ''}`}>About</Link>
                         </li>
 
                     </ul>
