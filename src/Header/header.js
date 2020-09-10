@@ -27,47 +27,43 @@ const Navigation = (props) => {
             <header className="App-header">
 
                 <Link to="/" className="logo">
-                    <h1>Sigrid Stensvold</h1>
-                    <h2>graphic & web designer</h2>
+                    <h1>The Museum of Lost Experiences</h1>
                 </Link>
 
                 <nav className="main-nav">
                     <ul>
                         <li>
-                            <Link to="/portfolio" className={`${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Portfolio</Link>
+                            <Link to="/" className={`${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>placeholder</Link>
                             <ul>
                                 <li>
-                                    <Link to="/portfolio">Graphic Design</Link>
+                                    <Link to="/">Graphic Design</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/portfolio">Illustration</Link>
+                                    <Link to="/">Illustration</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/portfolio">Motion Design</Link>
+                                    <Link to="/">Motion Design</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/portfolio">Painting</Link>
+                                    <Link to="/">Painting</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/portfolio">Web Development</Link>
+                                    <Link to="/">Web Development</Link>
                                 </li>
 
                             </ul>
                         </li>
                         <li>
-                            <Link to="/resume" className={`${route === '/resume' ? 'main-nav-active-link' : ''}`}>Resume</Link>
+                            <Link to="/resume" className={`${route === '/home' ? 'main-nav-active-link' : ''}`}>Home</Link>
                         </li>
                         <li>
                             <Link to="/about" className={`${route === '/about' ? 'main-nav-active-link' : ''}`}>About Me</Link>
                         </li>
 
-                        <li>
-                            <Link to="/contact" className={`${route === '/contact' ? 'main-nav-active-link' : ''}`}>Contact</Link>
-                        </li>
                     </ul>
                 </nav>
             </header>
