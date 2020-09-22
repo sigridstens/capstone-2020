@@ -1,0 +1,33 @@
+.hero {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    border-bottom: 5px solid var(--pink);
+    position: relative;
+}
+
+.hero h2 {
+    margin: auto;
+}
+
+.hero .outlined {
+    -webkit-text-stroke: 2px var(--darkgreen);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+.hero .hidden {
+    visibility: hidden;
+}
+.hero .rotating {
+    position: absolute;
+    transform: translatex(-6.5em);
+}
+
+.fa-angle-down {
+    color: var(--blue);
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translatex(-50%);
+    font-size: 2em;
+}
