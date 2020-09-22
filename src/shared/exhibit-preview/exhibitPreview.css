@@ -1,0 +1,24 @@
+.yellow-triangle-shape {
+    transform: scale(2.1);
+    top: 11em;
+    left: 0;
+}
+
+.exhibit-preview {
+    text-align: right;
+    margin-bottom: 10em;
+}
+
+h4 {
+    margin-bottom: 1.5em;
+}
+
+.hang-off-screen {
+    position: absolute;
+    right: -6em;
+}
+
+.hang-off-screen .circle {
+    margin: 1em;
+
+}

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import '../App.css';
+import './header.css';
 import {Link, withRouter} from 'react-router-dom';
 
 
@@ -20,7 +20,7 @@ const Navigation = (props) => {
                     <img className="logo" src={process.env.PUBLIC_URL + '/MoLE-logo-horizontal.png'}  alt="Logo for the Museum of Lost Experiences" />
                 </Link>
 
-                <nav className="main-nav">
+                <nav className="navigation main-nav">
                     <ul>
                         <li className="nav-item">
                             <Link to="/" className={` ${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Collection</Link>

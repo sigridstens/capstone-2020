@@ -1,0 +1,16 @@
+
+.em-half {
+    width: 0;
+    height: 0;
+    border-left: 25em solid transparent;
+}
+
+.side-one {
+    border-top: 25em solid var(--darkgreen);
+}
+
+.side-two {
+    border-bottom: 25em solid var(--darkgreen);
+}
+
+

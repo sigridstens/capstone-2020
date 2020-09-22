@@ -6,22 +6,23 @@ import Circle from "../circle/circle";
 function ExhibitPreview() {
   const data = [
     {
-      image: "/MoLE-logo-horizontal.png"
+      image: "/collage-submission.jpg"
     },
     {
-      image: ""
+      image: "/crowd-submission.jpg"
     },
     {
-      image: ""
+      image: "fashion-submission.jpg"
     }
   ];
 
   return (
-    <section>
+    <section className="content-section exhibit-preview">
+      <div className="yellow-triangle-shape shape"></div>
       <h3>Current Exhibit</h3>
       <h4>Lost Quarantine Experiences</h4>
 
-      <section>
+      <section className="hang-off-screen">
         {
           data.map((submission, index) => {
             return (

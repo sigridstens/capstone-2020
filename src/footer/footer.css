@@ -1,0 +1,41 @@
+/* Footer Component Styles */
+footer.content-section {
+    background-color: var(--darkgreen);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    color: white;
+    display: flex;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-nav li:not(:last-child) {
+    margin: .5em 0;
+}
+
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.social li {
+    padding-left: 1em;
+}
+
+.right-side {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.right-side p {
+    font-size: .75em;
+    margin-bottom: 1rem;
+}

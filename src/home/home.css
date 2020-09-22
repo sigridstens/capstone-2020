@@ -2,7 +2,6 @@
     width: 100%;
     height: 90vh;
     display: flex;
-    border-bottom: 5px solid var(--pink);
     position: relative;
 }
 
@@ -20,7 +19,8 @@
 }
 .hero .rotating {
     position: absolute;
-    transform: translatex(-6.5em);
+    transform: translatex(-6.35em);
+    color: var(--yellow);
 }
 
 .fa-angle-down {
@@ -30,4 +30,22 @@
     left: 50%;
     transform: translatex(-50%);
     font-size: 2em;
+}
+
+.pullquote {
+    margin: 2.5em 0;
+}
+
+.rectangle {
+    height: 100%;
+    width: 100%;
+    background-color: var(--darkgreen);
+    top: 0;
+    visibility: hidden;
+}
+
+.em-shape {
+    right: 23.25em;
+    top: -2.5em;
+    transform: scale(1.01);
 }
