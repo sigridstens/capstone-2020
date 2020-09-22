@@ -5,7 +5,7 @@ import '../App.css';
 function Participate() {
     return(
         <main>
-            <h1>Participate</h1>
+            <h2>How to Participate</h2>
         </main>
     )
 }

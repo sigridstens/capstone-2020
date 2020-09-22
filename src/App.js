@@ -1,12 +1,12 @@
 import React from 'react';
 /*import logo from './logo.svg';*/
 import './App.css';
-import Header from './Header/header.js';
-import Footer from './Footer/footer.js';
-import Home from './Home/home.js';
-import About from './About/about.js';
-import Participate from './Participate/participate.js';
-import {BrowserRouter,Route} from 'react-router-dom';
+import Header from './header/header.js';
+import Footer from './footer/footer.js';
+import Home from './home/home.js';
+import About from './about/about.js';
+import Participate from './participate/participate.js';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 function App() {
   return (

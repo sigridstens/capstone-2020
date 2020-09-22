@@ -8,7 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-
 /* Global Styles */
 :root {
     --red: #eb4827;
@@ -17,13 +16,15 @@ html {
     --pink: #f5dbd9;
     --darkgreen: #264d3b;
     --black: #000;
+    --white: #fff;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    letter-spacing: .025em;
-    font-size: 1em;
+    font-family: forma-djr-deck, sans-serif;
+    letter-spacing: .075em;
+    font-size: 1.15em;
     position: relative;
+    line-height: 1.75em;
 }
 
 .background{
@@ -42,6 +43,14 @@ a {
     font-weight: 500;
 }
 
+.button {
+    background-color: var(--red);
+    padding: .5em 1em;
+    font-family: FatFrank, sans-serif;
+    color: var(--white);
+    border: solid 2px white;
+}
+
 
 /* Header Section Styles */
 header {
@@ -49,6 +58,10 @@ header {
     padding: 3em 4em 1em 4em;
     display: flex;
     justify-content: space-between;
+}
+
+header .logo {
+    width: 75%;
 }
 
 header a {
@@ -62,6 +75,7 @@ header h1, header h2 {
 }
 
 header h1 {
+    font-family: fatfrank, sans-serif;
     font-size: 1.75em;
     margin: .25em .25em ;
 }
@@ -85,9 +99,8 @@ header .main-nav ul li {
     margin: .5em 1em;
 }
 
-header .main-nav ul ul {
-    flex-direction: column;
-    display: none;
+header .main-nav ul ul.sub-nav li {
+    margin: .5em 0;
 }
 
 
@@ -118,6 +131,21 @@ header a.main-nav-active-link::after {
     z-index: 100;
 }
 
+header .nav-item {
+    display: relative;
+}
+
+header .nav-item .sub-nav {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    top: 1.5em;
+    background-color: rgba(255,255,255,.5);
+}
+
+header .main-nav .nav-item:hover .sub-nav {
+    display: flex;
+}
 
 .logo h1, .logo h2 {
     width: fit-content;
@@ -167,4 +195,6 @@ footer {
     text-align: center;
     padding: 0 0 1em 0;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }

@@ -2,12 +2,12 @@ import React from 'react';
 import '../App.css';
 
 
-function Home() {
+function Gallery() {
     return(
         <main>
-            <p>Home page content</p>
+            <h2>How to Participate</h2>
         </main>
     )
 }
 
-export default Home;
+export default Gallery;

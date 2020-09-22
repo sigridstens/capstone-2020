@@ -15,34 +15,34 @@ const Navigation = (props) => {
     const showNav = () => {
         return (
             <header className="App-header">
-
+                {/*🦐*/}
                 <Link to="/" className="logo">
-                    <h1>The Museum of Lost Experiences</h1>
+                    <img className="logo" src={process.env.PUBLIC_URL + '/MoLE-logo-horizontal.png'}  alt="Logo for the Museum of Lost Experiences" />
                 </Link>
 
                 <nav className="main-nav">
                     <ul>
-                        <li>
-                            <Link to="/" className={`${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Navigation</Link>
-                            <ul>
+                        <li className="nav-item">
+                            <Link to="/" className={` ${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Collection</Link>
+                            <ul className="sub-nav">
                                 <li>
-                                    <Link to="/">Sub-link 1</Link>
+                                    <Link to="/">Entire Collection</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/">Sub-link 2</Link>
+                                    <Link to="/">Featured Exhibits</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/">Sub-link 3</Link>
+                                    <Link to="/">Something Random </Link>
                                 </li>
 
                             </ul>
                         </li>
-                        <li>
-                            <Link to="/participate" className={`${route === '/participate' ? 'main-nav-active-link' : ''}`}>How to Participate</Link>
+                        <li className="nav-item">
+                            <Link to="/participate" className={`${route === '/participate' ? 'main-nav-active-link' : ''}`}>Participate</Link>
                         </li>
-                        <li>
+                        <li className="nav-item">
                             <Link to="/about" className={`${route === '/about' ? 'main-nav-active-link' : ''}`}>About</Link>
                         </li>
 

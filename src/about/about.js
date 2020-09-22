@@ -5,7 +5,7 @@ import '../App.css';
 function About() {
     return(
         <main>
-            <h1>About the Project</h1>
+            <h2>About the Project</h2>
         </main>
     )
 }
