@@ -14,27 +14,30 @@ const Navigation = (props) => {
 
     const showNav = () => {
         return (
-            <header className="App-header">
-                {/*🦐*/}
-                <Link to="/" className="logo">
-                    <img className="logo" src={process.env.PUBLIC_URL + '/MoLE-logo-horizontal.png'}  alt="Logo for the Museum of Lost Experiences" />
-                </Link>
+            <header>
+
+                <h1>
+                    {/*🦐*/}
+                    <Link to="/" className="logo">
+                        <img className="logo" src={process.env.PUBLIC_URL + '/MoLE-logo-horizontal.png'}  alt="Logo for the Museum of Lost Experiences" />
+                    </Link>
+                </h1>
 
                 <nav className="navigation main-nav">
                     <ul>
                         <li className="nav-item">
-                            <Link to="/" className={` ${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Collection</Link>
+                            <Link to="/" className={` ${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Explore</Link>
                             <ul className="sub-nav">
                                 <li>
-                                    <Link to="/">Entire Collection</Link>
+                                    <Link to="/">Full Collection</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/">Featured Exhibits</Link>
+                                    <Link to="/">Exhibits</Link>
                                 </li>
 
                                 <li>
-                                    <Link to="/">Something Random </Link>
+                                    <Link to="/">Random Submission</Link>
                                 </li>
 
                             </ul>
@@ -45,9 +48,10 @@ const Navigation = (props) => {
                         <li className="nav-item">
                             <Link to="/about" className={`${route === '/about' ? 'main-nav-active-link' : ''}`}>About</Link>
                         </li>
-
                     </ul>
                 </nav>
+
+                <div className="rectangle-shape shape"/>
             </header>
             )
         };

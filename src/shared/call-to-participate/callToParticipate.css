@@ -1,3 +1,15 @@
+.call-to-participate {
+    margin: 16em 0 3em 0;
+}
+
+.rectangle-shape {
+    background-color: var(--pink);
+    height: 2em;
+    width: 70%;
+    left: 0;
+    top: 0;
+}
+
 .blue-circle-shape {
     right: -6.5em;
     top: 50%;

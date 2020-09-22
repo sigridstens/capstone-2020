@@ -19,15 +19,18 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
+
+
+
   return (
     <main>
       <section className="hero content-section">
         <h2>Everyone has <span className="outlined">lost</span> <span className="hidden">experiences.</span>
           <span className="rotating">{wordCarousel[index]}</span>
         </h2>
-        <i className="fas fa-angle-down"></i></section>
+        <i className="fas fa-angle-down scroll-button"></i></section>
 
-      <section className="content-section col-container pullquote">
+      <section className="content-section col-container description">
         <div className="col-text center-container">
           <p >The Museum of Lost Experiences is a collection of creative submissions representing those experiences.</p>
         <Link to="/participate" className="button center">participate</Link>

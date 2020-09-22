@@ -1,7 +1,7 @@
 import React from 'react';
 import './exhibitPreview.css';
 import Circle from "../circle/circle";
-
+import {Link, withRouter} from 'react-router-dom';
 
 function ExhibitPreview() {
   const data = [
@@ -31,6 +31,8 @@ function ExhibitPreview() {
           })
         }
       </section>
+
+      <Link to="/collection" className="button exhibit-link">view exhibit</Link>
     </section>
   )
 }

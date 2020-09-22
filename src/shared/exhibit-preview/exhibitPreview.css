@@ -6,7 +6,7 @@
 
 .exhibit-preview {
     text-align: right;
-    margin-bottom: 10em;
+    padding-bottom: 10em;
 }
 
 h4 {
@@ -21,4 +21,11 @@ h4 {
 .hang-off-screen .circle {
     margin: 1em;
 
+}
+
+.exhibit-link {
+    background-color: var(--yellow);
+    position: absolute;
+    bottom: 1.5em;
+    right: 4.5em;
 }
