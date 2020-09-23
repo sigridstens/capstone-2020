@@ -28,15 +28,15 @@ const Navigation = (props) => {
                         <li className="nav-item">
                             <Link to="/" className={` ${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Explore</Link>
                             <ul className="sub-nav">
-                                <li>
+                                <li className="sub-nav-item">
                                     <Link to="/">Full Collection</Link>
                                 </li>
 
-                                <li>
+                                <li className="sub-nav-item">
                                     <Link to="/">Exhibits</Link>
                                 </li>
 
-                                <li>
+                                <li className="sub-nav-item">
                                     <Link to="/">Random Submission</Link>
                                 </li>
 

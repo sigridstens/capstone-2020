@@ -23,24 +23,26 @@ function Home() {
 
 
   return (
-    <main>
+    <main className="home">
       <section className="hero content-section">
         <h2>Everyone has <span className="outlined">lost</span> <span className="hidden">experiences.</span>
           <span className="rotating">{wordCarousel[index]}</span>
         </h2>
         <i className="fas fa-angle-down scroll-button"></i></section>
 
-      <section className="content-section col-container description">
-        <div className="col-text center-container">
-          <p >The Museum of Lost Experiences is a collection of creative submissions representing those experiences.</p>
-        <Link to="/participate" className="button center">participate</Link>
-          <div className="">
-            <EmShape className="em-shape shape"/>
-            <div className="rectangle shape"></div>
-          </div>
-        </div>
+        <section className="content-section col-container description">
+          <div className="col-text center-container">
+            <p>The Museum of Lost Experiences is a collection of creative submissions representing those experiences.</p>
 
-      </section>
+            <Link to="/participate" className="button center">participate</Link>
+
+            <div className="">
+              <EmShape className="em-shape shape"/>
+
+            <div className="rectangle shape"></div>
+            </div>
+          </div>
+        </section>
 
       <ExhibitPreview/>
       <CallToParticipate/>

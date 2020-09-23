@@ -6,6 +6,7 @@ header {
     justify-content: space-between;
     position: fixed;
     z-index: 1;
+    background-color: white;
 }
 
 .logo {
@@ -32,7 +33,7 @@ header a {
 .main-nav .nav-item {
     position: relative;
     margin:.5em 1em;
-    padding: 0 0 .25em 0;
+    padding: 0 0 .1em 0;
 }
 
 .main-nav ul ul {
@@ -44,11 +45,12 @@ header a {
     flex-direction: column;
     display: none;
     position: absolute;
-    top: 1.5em;
+    top: 1.35em;
 }
 
 .sub-nav li {
     padding: .5em .25em .5em 0;
+    position: relative;
 }
 
 a.main-nav-active-link::after {
@@ -77,17 +79,13 @@ a.main-nav-active-link::after {
     display: block;
 }
 
-.sub-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: -.5em;
-    left: 0;
+.sub-nav .sub-nav-item::after {
     background-color: var(--white);
+    height: 4px;
+    bottom: .2em;
 }
 
-.sub-nav a:hover::after {
+.sub-nav .sub-nav-item:hover::after {
     visibility: visible;
     width: 100%;
     transition: all 0.4s ease-in-out 0s;
@@ -98,9 +96,9 @@ a.main-nav-active-link::after {
 }
 
 header .rectangle-shape {
+    position: absolute;
     height: 1em;
     width: 100%;
     background-color: var(--pink);
-    bottom: 0;
-    right: 0;
+    top: 0;
 }

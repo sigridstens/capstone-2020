@@ -15,6 +15,7 @@ html {
     --blue: #0387c8;
     --pink: #f5dbd9;
     --darkgreen: #264d3b;
+    --brown: #936B3B;
     --black: #000;
     --white: #fff;
 }
@@ -24,6 +25,8 @@ body {
     letter-spacing: .075rem;
     font-size: 1.4rem;
     position: relative;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .background{
@@ -85,7 +88,6 @@ p {
 }
 
 .pullquote {
-    font-size: 1.75rem;
 }
 
 .center-container {
@@ -112,6 +114,7 @@ p {
 .content-section {
     padding: 10rem 15%;
     position: relative;
+    width: 100vw
 }
 
 .navigation a {
@@ -125,7 +128,7 @@ p {
     padding: 0;
 }
 
-.navigation a::after {
+.navigation li::after {
     content: "";
     position: absolute;
     width: 0;
@@ -135,7 +138,7 @@ p {
     background-color: var(--yellow);
 }
 
-.navigation a:hover::after {
+.navigation li:hover::after {
     visibility: visible;
     width: 100%;
     transition: all 0.4s ease-in-out 0s;
