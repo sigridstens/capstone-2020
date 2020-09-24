@@ -20,11 +20,11 @@ h4 {
 
 .hang-off-screen .circle {
     margin: 1em;
-
 }
 
 .exhibit-link {
     background-color: var(--yellow);
+    color: var(--darkgreen);
     position: absolute;
     bottom: 1.5em;
     right: 4.5em;

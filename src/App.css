@@ -55,7 +55,7 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-    line-height: 1em;
+    line-height: 1.1em;
 }
 
 h1 {
@@ -132,10 +132,10 @@ p {
     content: "";
     position: absolute;
     width: 0;
-    height: 3px;
-    bottom: -.5em;
+    height: 7px;
+    bottom: -.25em;
     left: 0;
-    background-color: var(--yellow);
+    background-color: var(--red);
 }
 
 .navigation li:hover::after {

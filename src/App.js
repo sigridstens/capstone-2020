@@ -6,6 +6,7 @@ import Footer from './footer/footer.js';
 import Home from './home/home.js';
 import About from './about/about.js';
 import Participate from './participate/participate.js';
+import Explore from './explore/explore.js';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/participate" component={Participate} />
+            <Route exact path="/explore" component={Explore} />
             <Footer />
         </div>
       </BrowserRouter>

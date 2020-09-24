@@ -26,7 +26,7 @@ const Navigation = (props) => {
                 <nav className="navigation main-nav">
                     <ul>
                         <li className="nav-item">
-                            <Link to="/" className={` ${route === '/portfolio' ? 'main-nav-active-link' : ''}`}>Explore</Link>
+                            <Link to="/explore" className={` ${route === '/explore' ? 'main-nav-active-link' : ''}`}>Explore</Link>
                             <ul className="sub-nav">
                                 <li className="sub-nav-item">
                                     <Link to="/">Full Collection</Link>

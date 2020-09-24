@@ -1,0 +1,61 @@
+.explore {
+    padding-top: 15em;
+}
+
+.explore .exhibit-preview {
+    padding-bottom: 25em;
+}
+.explore .exhibit-link {
+    bottom: 18.5em;
+    right: 4.5em;
+}
+
+.collection-preview {
+    height: 50em;
+    padding-top: 17em;
+    padding-bottom: 3em;
+}
+
+.collection-preview h4 {
+    color: var(--red);
+}
+
+.explore .brown-rectangle {
+    height: 3em;
+    width: 15%;
+    background-color: var(--brown);
+    bottom: auto;
+    top: 0;
+    left: 0;
+}
+
+.explore .red-rectangle {
+    height: 4em;
+    width: 60%;
+    background-color: var(--red);
+    top: 5em;
+    left: 0;
+}
+
+.explore .em-shape {
+    right: 23em;
+    top: 17em;
+    transform: scale(1.6);
+}
+
+.gallery-preview {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 3em;
+}
+
+.gallery-preview .circle {
+    margin: 1.5em .5em;
+}
+
+.collection-preview a.button {
+    margin: 8.5em;
+}
+
+

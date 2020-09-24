@@ -45,7 +45,8 @@ header a {
     flex-direction: column;
     display: none;
     position: absolute;
-    top: 1.35em;
+    top: 1.25em;
+    left: -.5em;
 }
 
 .sub-nav li {
@@ -57,11 +58,11 @@ a.main-nav-active-link::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 3px;
-    bottom: -.5em;
+    height: 7px;
+    bottom: -.25em;
     left: 0;
-    background-color: var(--yellow);
-    z-index: 100;
+    background-color: var(--red);
+    z-index: 5;
 }
 
 .nav-item:hover .sub-nav {
@@ -81,8 +82,8 @@ a.main-nav-active-link::after {
 
 .sub-nav .sub-nav-item::after {
     background-color: var(--white);
-    height: 4px;
-    bottom: .2em;
+    height: 7px;
+    bottom: .15em;
 }
 
 .sub-nav .sub-nav-item:hover::after {
