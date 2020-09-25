@@ -2,3 +2,69 @@
     padding-top: 10em;
 }
 
+.relative {
+    position: relative;
+}
+
+.participate .blue-circle-shape {
+    right: 50%;
+    transform: translateX(50%) scale(1.5);
+    top: 2em;
+}
+
+.circle-text {
+    position: absolute;
+    top: -3em;
+    background-color: var(--blue);
+    padding: 11em 7.25em;
+    height: 25em;
+    width: 25em;
+    border-radius: 100%;
+    color: white;
+}
+
+.participate .multiple-circle {
+    width: 80%;
+    padding: 10% 4%
+10% 16%;
+}
+
+.participate .col-two {
+    align-self: flex-end;
+}
+
+.participate .rectangle-shape {
+    height: 1.5em;
+}
+
+.participate .brown-rectangle {
+    bottom: auto;
+    top: 0;
+    right: auto;
+    left: 0;
+}
+
+.participate .red-rectangle {
+    left: auto;
+    right: 0;
+    top: -5.5em;
+    width: 48.5%;
+}
+
+.participate .yellow-triangle-shape {
+    top: 8em;
+}
+
+.participate .participation-details {
+    justify-content: flex-end;
+}
+
+.participate .center-container {
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.align-right {
+    justify-content: flex-end;
+}

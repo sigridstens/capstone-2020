@@ -87,6 +87,12 @@ p {
     line-height: 2.25rem;
 }
 
+em {
+    color: var(--blue);
+    font-style: normal;
+    line-height: 1.5;
+}
+
 .pullquote {
 }
 
