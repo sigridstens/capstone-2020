@@ -19,6 +19,7 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
+
   return (
     <main className="home">
       <section className="hero content-section">

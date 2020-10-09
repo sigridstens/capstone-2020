@@ -8,6 +8,8 @@ import About from './about/about.js';
 import Participate from './participate/participate.js';
 import Explore from './explore/explore.js';
 import {BrowserRouter, Route} from 'react-router-dom';
+import FullCollection from "./full-collection/full-collection";
+import CurrentExhibit from "./current-exhibit/current-exhibit";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/participate" component={Participate} />
             <Route exact path="/explore" component={Explore} />
+            <Route exact path="/full-collection" component={FullCollection} />
+            <Route exact path="/current-exhibits" component={CurrentExhibit} />
             <Footer />
         </div>
       </BrowserRouter>

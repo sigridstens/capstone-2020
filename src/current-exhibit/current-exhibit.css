@@ -1,0 +1,70 @@
+.current-exhibit {
+    padding-top: 15em ;
+    position: relative;
+}
+
+.current-exhibit .yellow-triangle-shape {
+    transform: scale(2);
+    top: -5em;
+    left: 8em;
+}
+
+.current-exhibit h3, .current-exhibit h4 {
+    padding: 0 15%;
+}
+
+.current-exhibit .gallery {
+    padding: 5em 12%;
+}
+
+.gallery .circle {
+    margin: 1em;
+}
+
+.filtering {
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: var(--brown);
+    padding: .85rem 1.25rem;
+    font-family: FatFrank, sans-serif;
+    font-size: 1.25rem;
+    color: var(--white);
+    width: fit-content;
+}
+
+.filtering h5{
+    margin: 0;
+    padding: .03em 1em 0 0;
+    font-size: 1.25rem;
+}
+
+.filtering ul {
+    font-family: forma-djr-deck, sans-serif;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filtering ul li {
+    padding: 0 1em;
+}
+
+.filtering:hover ul {
+    display: inline-flex;
+
+}
+
+.current-exhibit .em-shape {
+    top: unset;
+    bottom: 19.5em;
+}
+
+.current-exhibit .exhibit-link {
+    right: unset;
+    left: 10em;
+    background-color: var(--darkgreen);
+    color: white;
+}

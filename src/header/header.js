@@ -29,11 +29,11 @@ const Navigation = (props) => {
                             <Link to="/explore" className={` ${route === '/explore' ? 'main-nav-active-link' : ''}`}>Explore</Link>
                             <ul className="sub-nav">
                                 <li className="sub-nav-item">
-                                    <Link to="/">Full Collection</Link>
+                                    <Link to="/full-collection">Full Collection</Link>
                                 </li>
 
                                 <li className="sub-nav-item">
-                                    <Link to="/">Exhibits</Link>
+                                    <Link to="/current-exhibits">Exhibits</Link>
                                 </li>
 
                                 <li className="sub-nav-item">
