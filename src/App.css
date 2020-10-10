@@ -54,6 +54,10 @@ a {
     border: solid 2px white;
 }
 
+.button:hover {
+    background-color: var(--pink);
+}
+
 h1, h2, h3, h4, h5 {
     line-height: 1.1em;
 }
@@ -80,6 +84,13 @@ h4 {
     font-size: 1.5em;
     color: var(--darkgreen);
     margin: .25em 0 1em 0;
+}
+
+h5 {
+    font-size: .85em;
+    color: var(--black);
+    margin: .5em 0 .5em 0;
+    font-weight: normal;
 }
 
 p {

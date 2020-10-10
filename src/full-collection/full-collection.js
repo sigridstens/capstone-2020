@@ -55,7 +55,7 @@ function FullCollection() {
 
   return (
     <main>
-      <section className= "current-exhibit">
+      <section className= "full-collection">
         <div className="yellow-triangle-shape shape"></div>
         <h3>Entire Collection</h3>
         <h4>Lost Experiences</h4>
@@ -82,7 +82,6 @@ function FullCollection() {
         </section>
 
         <Link to="/collection" className="button exhibit-link">view exhibit</Link>
-        <EmShape/>
 
       </section>
 

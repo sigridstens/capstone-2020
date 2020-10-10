@@ -1,19 +1,24 @@
-.current-exhibit {
-    padding-top: 15em ;
-    position: relative;
+.full-collection {
+    padding-top: 15em;
 }
 
-.current-exhibit .yellow-triangle-shape {
+.full-collection .yellow-triangle-shape {
     transform: scale(2);
     top: -5em;
     left: 8em;
+    border-top: 20em solid var(--darkgreen);
+    border-right: 20em solid transparent;
 }
 
-.current-exhibit h3, .current-exhibit h4 {
+.full-collection h3, .full-collection h4 {
     padding: 0 15%;
 }
 
-.current-exhibit .gallery {
+.full-collection h3 {
+    color: var(--brown);
+}
+
+.full-collection .gallery {
     padding: 5em 12%;
 }
 
@@ -57,12 +62,12 @@
 
 }
 
-.current-exhibit .em-shape {
+.full-collection .em-shape {
     top: unset;
     bottom: 19.5em;
 }
 
-.current-exhibit .exhibit-link {
+.full-collection .exhibit-link {
     right: unset;
     left: 10em;
     background-color: var(--darkgreen);

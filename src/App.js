@@ -10,6 +10,7 @@ import Explore from './explore/explore.js';
 import {BrowserRouter, Route} from 'react-router-dom';
 import FullCollection from "./full-collection/full-collection";
 import CurrentExhibit from "./current-exhibit/current-exhibit";
+import Submission from "./submission/submission";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/explore" component={Explore} />
             <Route exact path="/full-collection" component={FullCollection} />
             <Route exact path="/current-exhibits" component={CurrentExhibit} />
+          <Route exact path="/submission" component={Submission} />
             <Footer />
         </div>
       </BrowserRouter>

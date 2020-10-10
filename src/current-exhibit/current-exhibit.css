@@ -34,6 +34,10 @@
     width: fit-content;
 }
 
+.filtering h5 {
+    color: white;
+}
+
 .filtering h5{
     margin: 0;
     padding: .03em 1em 0 0;
@@ -66,5 +70,12 @@
     right: unset;
     left: 10em;
     background-color: var(--darkgreen);
+    color: white;
+}
+
+.current-exhibit .exhibit-link:hover {
+    right: unset;
+    left: 10em;
+    background-color: var(--yellow);
     color: white;
 }
