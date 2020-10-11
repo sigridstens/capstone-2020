@@ -180,3 +180,16 @@ em {
     border-right: 20em solid transparent;
 }
 
+/* Filtering Styles */
+.filtering {
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: var(--brown);
+    padding: .85rem 1.25rem;
+    font-family: FatFrank, sans-serif;
+    font-size: 1.25rem;
+    color: var(--white);
+    width: fit-content;
+}

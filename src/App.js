@@ -1,5 +1,4 @@
 import React from 'react';
-/*import logo from './logo.svg';*/
 import './App.css';
 import Header from './header/header.js';
 import Footer from './footer/footer.js';
@@ -9,8 +8,9 @@ import Participate from './participate/participate.js';
 import Explore from './explore/explore.js';
 import {BrowserRouter, Route} from 'react-router-dom';
 import FullCollection from "./full-collection/full-collection";
-import CurrentExhibit from "./current-exhibit/current-exhibit";
+import ExhibitGallery from "./exhibit-gallery/exhibit-gallery";
 import Submission from "./submission/submission";
+import ExhibitsOverview from "./exhibits-overview/exhibits-overview";
 
 function App() {
   return (
@@ -22,8 +22,9 @@ function App() {
             <Route exact path="/participate" component={Participate} />
             <Route exact path="/explore" component={Explore} />
             <Route exact path="/full-collection" component={FullCollection} />
-            <Route exact path="/current-exhibits" component={CurrentExhibit} />
-          <Route exact path="/submission" component={Submission} />
+            <Route exact path="/current-exhibits" component={ExhibitsOverview} />
+            <Route exact path="/exhibit/:id" component={ExhibitGallery} />
+            <Route exact path="/submission/:id" component={Submission} />
             <Footer />
         </div>
       </BrowserRouter>

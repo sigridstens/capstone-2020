@@ -2,68 +2,118 @@ import React from 'react';
 import './full-collection.css';
 import Circle from "../shared/circle/circle";
 import {Link, withRouter} from 'react-router-dom';
-import EmShape from "../shared/em-shape/emShape";
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 
-function FullCollection() {
-  const data = [
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1",
-      linkURL: "/submission"
-    },
-    {
-      image: "/crowd-submission.jpg",
-      title: "Submission 2",
-      linkURL: "/submission"
-    },
-    {
-      image: "fashion-submission.jpg",
-      title: "Submission 3",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 4",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 5",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 6",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 7",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 8",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 9",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 10",
-      linkURL: "/submission"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 11",
-      linkURL: "/submission"
-    }
-  ];
+export const submissions = [
+  {
+    image: "/collage-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission"
 
+  },
+  {
+    image: "/crowd-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission2"
+  },
+  {
+    image: "/fashion-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission3"
+  },    {
+    image: "/family-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission4"
+  },
+  {
+    image: "/camping-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission5"
+  },
+  {
+    image: "/travel-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission6"
+  },    {
+    image: "/painting-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission7"
+  },
+  {
+    image: "/porch-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission8"
+  },
+  {
+    image: "friendship-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission9"
+  },    {
+    image: "/collage-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission10"
+  },
+  {
+    image: "/crowd-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission11"
+  },
+  {
+    image: "/fashion-submission.jpg",
+    exhibitName: "Lost Quarantine Experiences",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission12"
+  },
+];
+
+function FullCollection() {
   return (
     <main>
       <section className= "full-collection">
@@ -84,9 +134,9 @@ function FullCollection() {
 
         <section className="gallery">
           {
-            data.map((submission, index) => {
+            submissions.map((submission, index) => {
               return (
-                <Circle key={index} backgroundImage={submission.image} title={submission.title} linkurl = {submission.linkURL}/>
+                <Circle key={index} backgroundImage={submission.image} title={submission.title} linkurl = {submission.linkpath}/>
               )
             })
           }

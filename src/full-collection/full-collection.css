@@ -1,13 +1,12 @@
 .full-collection {
-    padding-top: 15em;
+    padding-top: 25em;
 }
 
 .full-collection .yellow-triangle-shape {
-    transform: scale(2);
-    top: -5em;
-    left: 8em;
+    transform: scale(1);
+    top: 15em;
+    left: 0;
     border-top: 20em solid var(--darkgreen);
-    border-right: 20em solid transparent;
 }
 
 .full-collection h3, .full-collection h4 {
@@ -20,19 +19,6 @@
 
 .full-collection .gallery {
     padding: 5em 12%;
-}
-
-.filtering {
-    position: absolute;
-    right: 0;
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: var(--brown);
-    padding: .85rem 1.25rem;
-    font-family: FatFrank, sans-serif;
-    font-size: 1.25rem;
-    color: var(--white);
-    width: fit-content;
 }
 
 .filtering h5{

@@ -1,58 +1,17 @@
 import React from 'react';
-import './current-exhibit.css';
+import './exhibit-gallery.css';
 import Circle from "../shared/circle/circle";
-import {Link, withRouter} from 'react-router-dom';
+import {Link, withRouter, useParams} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
+import {submissions} from '../full-collection/full-collection.js';
 import ExhibitPreview from "../shared/exhibit-preview/exhibitPreview";
-import EmShape from "../shared/em-shape/emShape";
 
-function CurrentExhibit() {
-  const data = [
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/crowd-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "fashion-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    },
-    {
-      image: "/collage-submission.jpg",
-      title: "Submission 1"
-    }
-  ];
+function ExhibitGallery() {
+  let { id } = useParams();
+  // find id in projects
+  const submission = submissions.find(function (submission) {
+    return submission.linkpath === `/exhibit/${id}`
+  });
 
   return (
     <main>
@@ -74,7 +33,7 @@ function CurrentExhibit() {
 
           <section className="gallery">
             {
-              data.map((submission, index) => {
+              submissions.map((submission, index) => {
                 return (
                   <Circle key={index} backgroundImage={submission.image} linkurl={submission.linkURL} title={submission.title}/>
                 )
@@ -83,7 +42,6 @@ function CurrentExhibit() {
           </section>
 
           <Link to="/collection" className="button exhibit-link">view exhibit</Link>
-          <EmShape/>
 
         </section>
 
@@ -92,4 +50,4 @@ function CurrentExhibit() {
   )
 }
 
-export default CurrentExhibit;
+export default ExhibitGallery;

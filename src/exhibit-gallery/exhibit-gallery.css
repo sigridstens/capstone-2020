@@ -21,19 +21,6 @@
     margin: 1em;
 }
 
-.filtering {
-    position: absolute;
-    right: 0;
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: var(--brown);
-    padding: .85rem 1.25rem;
-    font-family: FatFrank, sans-serif;
-    font-size: 1.25rem;
-    color: var(--white);
-    width: fit-content;
-}
-
 .filtering h5 {
     color: white;
 }

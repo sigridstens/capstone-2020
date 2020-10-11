@@ -1,15 +1,15 @@
-.circle-img {
-    height: 12em;
-    width: 12em;
-    border-radius: 100%;
-}
-
 .circle {
     height: 100%;
     display: inline;
     width: fit-content;
     position: relative;
     border-bottom: none;
+}
+
+.circle-img {
+    height: 12em;
+    width: 12em;
+    border-radius: 100%;
 }
 
 .circle p {

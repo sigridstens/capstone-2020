@@ -16,6 +16,7 @@ h4 {
 .hang-off-screen {
     position: absolute;
     right: -6em;
+    display: inline-flex;
 }
 
 .hang-off-screen .circle {

@@ -1,20 +1,10 @@
 import React from 'react';
 import './exhibitPreview.css';
 import Circle from "../circle/circle";
-import {Link, withRouter} from 'react-router-dom';
+import {Link, useParams, withRouter} from 'react-router-dom';
+import {submissions} from "../../full-collection/full-collection";
 
 function ExhibitPreview() {
-  const data = [
-    {
-      image: "/collage-submission.jpg"
-    },
-    {
-      image: "/crowd-submission.jpg"
-    },
-    {
-      image: "fashion-submission.jpg"
-    }
-  ];
 
   return (
     <section className="content-section exhibit-preview">
@@ -23,13 +13,11 @@ function ExhibitPreview() {
       <h4>Lost Quarantine Experiences</h4>
 
       <section className="hang-off-screen">
-        {
-          data.map((submission, index) => {
-            return (
-              <Circle key={index} backgroundImage={submission.image}/>
-            )
-          })
-        }
+
+        <Circle backgroundImage={submissions[0].image}/>
+        <Circle backgroundImage={submissions[1].image}/>
+        <Circle backgroundImage={submissions[2].image}/>
+
       </section>
 
       <Link to="/collection" className="button exhibit-link">view exhibit</Link>
