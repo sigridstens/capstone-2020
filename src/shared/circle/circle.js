@@ -3,7 +3,6 @@ import './circle.css';
 
 
 function Circle(props) {
-  console.log(props);
   return (
     <a className="circle" href={props.linkurl}>
       <div className="overlay"></div>

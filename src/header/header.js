@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './header.css';
 import {Link, withRouter} from 'react-router-dom';
+import {submissions} from "../full-collection/full-collection";
 
 
 const Navigation = (props) => {
@@ -10,6 +11,12 @@ const Navigation = (props) => {
     useEffect(() => {
         setRoute(props.location.pathname);
     }, [props.location]);
+
+    let getRandomURL = () => {
+        let randomSubmission = Math.floor((Math.random() * submissions.length));
+        let randomURL = submissions[randomSubmission].linkpath;
+        return randomURL;
+    }
 
 
     const showNav = () => {
@@ -37,7 +44,7 @@ const Navigation = (props) => {
                                 </li>
 
                                 <li className="sub-nav-item">
-                                    <Link to="/">Random Submission</Link>
+                                    <Link to={getRandomURL()}>Random Submission</Link>
                                 </li>
 
                             </ul>

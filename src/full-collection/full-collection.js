@@ -77,7 +77,7 @@ export const submissions = [
     linkpath: "/submission/submission8"
   },
   {
-    image: "friendship-submission.jpg",
+    image: "/friendship-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
     title: "Lost in the Crowd",
