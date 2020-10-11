@@ -22,10 +22,6 @@
     padding: 5em 12%;
 }
 
-.gallery .circle {
-    margin: 1em;
-}
-
 .filtering {
     position: absolute;
     right: 0;
@@ -62,14 +58,14 @@
 
 }
 
-.full-collection .em-shape {
-    top: unset;
-    bottom: 19.5em;
-}
-
 .full-collection .exhibit-link {
     right: unset;
     left: 10em;
     background-color: var(--darkgreen);
     color: white;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
 }

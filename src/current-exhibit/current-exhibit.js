@@ -76,7 +76,7 @@ function CurrentExhibit() {
             {
               data.map((submission, index) => {
                 return (
-                  <Circle key={index} backgroundImage={submission.image}/>
+                  <Circle key={index} backgroundImage={submission.image} linkurl={submission.linkURL} title={submission.title}/>
                 )
               })
             }

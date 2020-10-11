@@ -1,6 +1,43 @@
-.circle {
+.circle-img {
     height: 12em;
     width: 12em;
     border-radius: 100%;
 }
+
+.circle {
+    height: 100%;
+    display: inline;
+    width: fit-content;
+    position: relative;
+    border-bottom: none;
+}
+
+.circle p {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    margin: 0;
+    width: 95%;
+    color: var(--darkgreen);
+    text-align: center;
+}
+
+.circle:hover p {
+    visibility: visible;
+
+}
+
+.circle:hover .overlay {
+    background-color: rgba(255,255,255,.75);
+    position: absolute;
+    width: 12em;
+    height: 12em;
+    border-radius: 100%;
+
+}
+
+
 

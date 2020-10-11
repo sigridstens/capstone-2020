@@ -9,47 +9,58 @@ function FullCollection() {
   const data = [
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 1",
+      linkURL: "/submission"
     },
     {
       image: "/crowd-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 2",
+      linkURL: "/submission"
     },
     {
       image: "fashion-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 3",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 4",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 5",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 6",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 7",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 8",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 9",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 10",
+      linkURL: "/submission"
     },
     {
       image: "/collage-submission.jpg",
-      title: "Submission 1"
+      title: "Submission 11",
+      linkURL: "/submission"
     }
   ];
 
@@ -75,7 +86,7 @@ function FullCollection() {
           {
             data.map((submission, index) => {
               return (
-                <Circle key={index} backgroundImage={submission.image}/>
+                <Circle key={index} backgroundImage={submission.image} title={submission.title} linkurl = {submission.linkURL}/>
               )
             })
           }
