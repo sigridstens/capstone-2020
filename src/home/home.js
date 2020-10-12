@@ -4,6 +4,7 @@ import ExhibitPreview from "../shared/exhibit-preview/exhibitPreview";
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import {Link} from 'react-router-dom';
 import EmShape from "../shared/em-shape/emShape";
+import {exhibits,exhibitNames} from "../exhibits-overview/exhibits-overview";
 
 
 function Home() {
@@ -42,7 +43,7 @@ function Home() {
           </div>
         </section>
 
-      <ExhibitPreview/>
+      <ExhibitPreview exhibit={exhibits[exhibitNames[0]]}/>
       <CallToParticipate/>
     </main>
   )

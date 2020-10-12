@@ -57,7 +57,25 @@ function Participate() {
         <section className=" content-section col-container pullquote">
           <div className="col-text">
             <EmShape/>
-            <p>When your lost experiences is ready, you can submit photo, video, and text:</p>
+            <p>When your lost experience is ready, take a photo or video of it and submit it here!</p>
+
+            <form>
+              <div className="form-row">
+                <label htmlFor="title">Submission Title:</label>
+                <input type="text" id="title" name="title" placeholder="What is is the title of your experience?" />
+              </div>
+              <div className="form-row">
+                <label htmlFor="medium">Medium:</label>
+                <input type="text" id="medium" name="medium" placeholder="What materials did you use to make it?" />
+              </div>
+
+              <div className="form-row">
+                <label htmlFor="description">Optional Description:</label>
+                <textarea type="text" id="description" name="description" cols="58" rows="10"/>
+              </div>
+
+              <input type="submit" value="submit" className="form-row button" />
+            </form>
           </div>
         </section>
 

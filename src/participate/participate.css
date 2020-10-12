@@ -68,3 +68,23 @@
 .align-right {
     justify-content: flex-end;
 }
+
+.form-row {
+    margin: 1em 0;
+}
+
+.form-row input[type=text] {
+    width: 100%;
+    padding: .5em;
+    color: var(--darkgreen);
+}
+
+
+button, input[type="submit"], input[type="reset"] {
+    border: none;
+    padding: .85rem 1.25rem;
+    cursor: pointer;
+}
+
+.form-row.button {
+}
