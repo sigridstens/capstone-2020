@@ -1,24 +1,21 @@
 import React from 'react';
 import './exhibit-gallery.css';
 import Circle from "../shared/circle/circle";
-import {Link, withRouter, useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
-import {submissions} from '../full-collection/full-collection.js';
-import ExhibitPreview from "../shared/exhibit-preview/exhibitPreview";
+import { exhibits } from '../exhibits-overview/exhibits-overview.js';
 
 function ExhibitGallery() {
-  let { id } = useParams();
-  // find id in projects
-  const submission = submissions.find(function (submission) {
-    return submission.linkpath === `/exhibit/${id}`
-  });
+  let { exhibitName } = useParams();
+  // find exhibit title in submissions
+  const exhibit = exhibits[exhibitName];
 
   return (
     <main>
         <section className= "current-exhibit">
           <div className="yellow-triangle-shape shape"></div>
           <h3>Current Exhibit</h3>
-          <h4>Lost Quarantine Experiences</h4>
+          <h4>{exhibitName}</h4>
 
           <nav className="filtering">
             <h5>filter exhibit</h5>
@@ -33,9 +30,9 @@ function ExhibitGallery() {
 
           <section className="gallery">
             {
-              submissions.map((submission, index) => {
+              exhibit.map((submission, index) => {
                 return (
-                  <Circle key={index} backgroundImage={submission.image} linkurl={submission.linkURL} title={submission.title}/>
+                  <Circle key={index} backgroundImage={submission.image} linkurl={submission.linkpath} title={submission.title}/>
                 )
               })
             }

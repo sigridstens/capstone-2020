@@ -1,7 +1,7 @@
 import React from 'react';
 import './participate.css';
 import EmShape from "../shared/em-shape/emShape";
-import {Link, withRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function Participate() {

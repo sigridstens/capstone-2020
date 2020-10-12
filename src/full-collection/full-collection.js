@@ -1,7 +1,7 @@
 import React from 'react';
 import './full-collection.css';
 import Circle from "../shared/circle/circle";
-import {Link, withRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 
 export const submissions = [
@@ -12,7 +12,8 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission"
+    linkpath: "/submission/submission",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
 
   },
   {
@@ -22,7 +23,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission2"
+    linkpath: "/submission/submission2",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/fashion-submission.jpg",
@@ -31,7 +34,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission3"
+    linkpath: "/submission/submission3",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },    {
     image: "/family-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
@@ -39,7 +44,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission4"
+    linkpath: "/submission/submission4",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/camping-submission.jpg",
@@ -48,7 +55,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission5"
+    linkpath: "/submission/submission5",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/travel-submission.jpg",
@@ -57,7 +66,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission6"
+    linkpath: "/submission/submission6",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },    {
     image: "/painting-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
@@ -65,7 +76,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission7"
+    linkpath: "/submission/submission7",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/porch-submission.jpg",
@@ -74,7 +87,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission8"
+    linkpath: "/submission/submission8",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/friendship-submission.jpg",
@@ -83,7 +98,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission9"
+    linkpath: "/submission/submission9",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },    {
     image: "/collage-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
@@ -91,7 +108,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission10"
+    linkpath: "/submission/submission10",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/crowd-submission.jpg",
@@ -100,7 +119,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission11"
+    linkpath: "/submission/submission11",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/fashion-submission.jpg",
@@ -109,7 +130,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission12"
+    linkpath: "/submission/submission12",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+
   },
   {
     image: "/collage-submission.jpg",
@@ -118,7 +141,10 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission"
+    linkpath: "/submission/submission",
+    exhibitLink: "/exhibit/summer-vacation"
+
+
 
   },
   {
@@ -128,7 +154,10 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission2"
+    linkpath: "/submission/submission2",
+    exhibitLink: "/exhibit/summer-vacation"
+
+
   },
   {
     image: "/fashion-submission.jpg",
@@ -137,7 +166,10 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission3"
+    linkpath: "/submission/submission3",
+    exhibitLink: "/exhibit/summer-vacation"
+
+
   },    {
     image: "/family-submission.jpg",
     exhibitName: "Summer Vacation",
@@ -145,7 +177,10 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission4"
+    linkpath: "/submission/submission4",
+    exhibitLink: "/exhibit/summer-vacation"
+
+
   },
   {
     image: "/camping-submission.jpg",
@@ -154,7 +189,10 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission5"
+    linkpath: "/submission/submission5",
+    exhibitLink: "/exhibit/summer-vacation"
+
+
   },
   {
     image: "/travel-submission.jpg",
@@ -163,7 +201,8 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission6"
+    linkpath: "/submission/submission6",
+    exhibitLink: "/exhibit/summer-vacation"
   },    {
     image: "/painting-submission.jpg",
     exhibitName: "Summer Vacation",
@@ -171,7 +210,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission7"
+    linkpath: "/submission/submission7",
+    exhibitLink: "/exhibit/summer-vacation"
+
   },
   {
     image: "/porch-submission.jpg",
@@ -180,7 +221,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission8"
+    linkpath: "/submission/submission8",
+    exhibitLink: "/exhibit/summer-vacation"
+
   },
   {
     image: "/friendship-submission.jpg",
@@ -189,7 +232,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission9"
+    linkpath: "/submission/submission9",
+    exhibitLink: "/exhibit/summer-vacation"
+
   },    {
     image: "/collage-submission.jpg",
     exhibitName: "Summer Vacation",
@@ -197,7 +242,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission10"
+    linkpath: "/submission/submission10",
+    exhibitLink: "/exhibit/summer-vacation"
+
   },
   {
     image: "/crowd-submission.jpg",
@@ -206,7 +253,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission11"
+    linkpath: "/submission/submission11",
+    exhibitLink: "/exhibit/summer-vacation"
+
   },
   {
     image: "/fashion-submission.jpg",
@@ -215,7 +264,9 @@ export const submissions = [
     title: "Lost in the Crowd",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission12"
+    linkpath: "/submission/submission12",
+    exhibitLink: "/exhibit/summer-vacation"
+
   },
 ];
 

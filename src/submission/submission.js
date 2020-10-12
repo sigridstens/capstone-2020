@@ -1,6 +1,6 @@
 import React from 'react';
 import './submission.css';
-import {Link, withRouter, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import {submissions} from "../full-collection/full-collection";
 

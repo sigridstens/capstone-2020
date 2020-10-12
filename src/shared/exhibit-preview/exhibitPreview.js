@@ -22,7 +22,7 @@ function ExhibitPreview(props) {
 
       </section>
 
-      <Link to="/collection" className="button exhibit-link">view exhibit</Link>
+      <Link to={`/exhibit/${exhibit[0].exhibitName}`} className="button exhibit-link">view exhibit</Link>
     </section>
   )
 }
