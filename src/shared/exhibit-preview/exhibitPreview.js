@@ -1,22 +1,24 @@
 import React from 'react';
 import './exhibitPreview.css';
 import Circle from "../circle/circle";
-import {Link, useParams, withRouter} from 'react-router-dom';
-import {submissions} from "../../full-collection/full-collection";
+import { Link } from 'react-router-dom';
 
-function ExhibitPreview() {
+function ExhibitPreview(props) {
+  let exhibit = props.exhibit;
+
+  console.log(exhibit);
 
   return (
     <section className="content-section exhibit-preview">
       <div className="yellow-triangle-shape shape"></div>
       <h3>Current Exhibit</h3>
-      <h4>Lost Quarantine Experiences</h4>
+      <h4>{exhibit[0].exhibitName}</h4>
 
       <section className="hang-off-screen">
 
-        <Circle backgroundImage={submissions[0].image}/>
-        <Circle backgroundImage={submissions[1].image}/>
-        <Circle backgroundImage={submissions[2].image}/>
+        <Circle backgroundImage={exhibit[0].image}/>
+        <Circle backgroundImage={exhibit[1].image}/>
+        <Circle backgroundImage={exhibit[2].image}/>
 
       </section>
 

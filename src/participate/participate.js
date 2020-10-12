@@ -47,6 +47,7 @@ function Participate() {
           <div className="col-text">
             <div className="red-rectangle"/>
             <div className="yellow-triangle-shape shape"/>
+            <h4>How to participate</h4>
             <p>To participate, make a creative representation of a lost experience in your life,  like a shift in your routine after some life change, a lost job, lost opportunity, lost moment, or lost relationship.</p>
 
             <p>For more examples, check out the <Link to="/explore">collection</Link> to see what others have submitted.</p>
@@ -56,20 +57,18 @@ function Participate() {
         <section className=" content-section col-container pullquote">
           <div className="col-text">
             <EmShape/>
-            <p>You can submit photo, video, and/or text creations <Link to="/">here</Link> on our website or by attaching it by email to:</p>
-
-            <em>museumoflostexperiences@gmail.com</em>
+            <p>When your lost experiences is ready, you can submit photo, video, and text:</p>
           </div>
         </section>
 
-        <section className=" content-section col-container pullquote align-right">
+        {/*<section className=" content-section col-container pullquote align-right">
           <div className="col-text ">
             <p>Want more flexibility? You can use any medium that can be sent by mail to the Museum of Lost Experiences collection location:</p>
 
             <em>3275 Memory Lane<br></br>
             Minneapolis, MN 55406</em>
           </div>
-        </section>
+        </section>*/}
       </main>
     )
 }

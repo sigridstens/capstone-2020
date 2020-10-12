@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/explore" component={Explore} />
             <Route exact path="/full-collection" component={FullCollection} />
             <Route exact path="/current-exhibits" component={ExhibitsOverview} />
-            <Route exact path="/exhibit/:id" component={ExhibitGallery} />
+            <Route exact path="/exhibit/:title" component={ExhibitGallery} />
             <Route exact path="/submission/:id" component={Submission} />
             <Footer />
         </div>

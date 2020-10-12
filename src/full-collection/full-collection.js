@@ -111,6 +111,112 @@ export const submissions = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission12"
   },
+  {
+    image: "/collage-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission"
+
+  },
+  {
+    image: "/crowd-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission2"
+  },
+  {
+    image: "/fashion-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission3"
+  },    {
+    image: "/family-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission4"
+  },
+  {
+    image: "/camping-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission5"
+  },
+  {
+    image: "/travel-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission6"
+  },    {
+    image: "/painting-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission7"
+  },
+  {
+    image: "/porch-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission8"
+  },
+  {
+    image: "/friendship-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission9"
+  },    {
+    image: "/collage-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission10"
+  },
+  {
+    image: "/crowd-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission11"
+  },
+  {
+    image: "/fashion-submission.jpg",
+    exhibitName: "Summer Vacation",
+    keywords: "",
+    title: "Lost in the Crowd",
+    medium: "collage mixed media",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
+    linkpath: "/submission/submission12"
+  },
 ];
 
 function FullCollection() {

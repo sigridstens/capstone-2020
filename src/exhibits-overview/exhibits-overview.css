@@ -5,3 +5,16 @@
 .exhibits-overview .exhibit-preview {
     margin-bottom: 20em;
 }
+
+.exhibits-overview .exhibit-preview:nth-of-type(2) .yellow-triangle-shape {
+    border-top: 20em solid var(--blue);
+}
+
+.exhibits-overview .exhibit-preview:nth-of-type(2) h3 {
+    color: var(--blue);
+}
+
+.exhibits-overview .exhibit-preview:nth-of-type(2) .button {
+    background-color: var(--blue);
+    color: white;
+}
