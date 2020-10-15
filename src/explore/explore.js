@@ -50,7 +50,7 @@ function Explore() {
               }
             </section>
 
-            <Link to="/collection" className="button">browse experiences</Link>
+            <Link to="/full-collection" className="button">browse experiences</Link>
 
             <EmShape/>
           </section>

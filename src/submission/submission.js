@@ -1,6 +1,6 @@
 import React from 'react';
 import './submission.css';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import {submissions} from "../full-collection/full-collection";
 
@@ -14,6 +14,15 @@ function Submission() {
   return (
     <main className= "submission">
         <section>
+          <p className="breadcrumbs">
+            <Link to="/full-collection">Entire Collection</Link>
+            <span> > </span>
+            <Link to="/current-exhibits">Exhibits</Link>
+            <span> > </span>
+            <Link to={`/exhibit/${submission.exhibitName}`}>{submission.exhibitName}</Link>
+            <span> > {submission.title}</span>
+          </p>
+
           <div className="content-section col-container">
             <figure className="col-half">
               <img src={submission.image} alt={submission.title}/>
