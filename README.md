@@ -1,3 +1,5 @@
+This readme should be updated to reflect the contents of your project. The scripts can stay if they are still accurate. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

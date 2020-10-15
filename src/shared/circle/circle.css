@@ -27,7 +27,6 @@
 
 .circle:hover p {
     visibility: visible;
-
 }
 
 .circle:hover .overlay {
@@ -36,7 +35,6 @@
     width: 12em;
     height: 12em;
     border-radius: 100%;
-
 }
 
 

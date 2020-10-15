@@ -10,6 +10,7 @@
     margin: 0 1em;
 }
 
+/* Remove all css that does nothing. This is making this file harder to read. */
 .submission h4 {
 }
 

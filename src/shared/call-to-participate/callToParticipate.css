@@ -10,9 +10,9 @@
     top: 0;
 }
 
+/* Is there supposed to be a css property to make this blue? is this name accurate?*/
 .blue-circle-shape {
     right: -6.5em;
     top: 50%;
     transform: translateY(-50%);
-
 }

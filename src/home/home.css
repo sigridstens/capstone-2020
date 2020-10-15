@@ -46,6 +46,7 @@
     visibility: hidden;
 }
 
+/* Why isnt this in the em-shape css file? */
 .em-shape {
     right: 23.25em;
     top: -2.5em;
