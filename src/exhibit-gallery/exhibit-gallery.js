@@ -29,6 +29,7 @@ function ExhibitGallery() {
           </nav>
 
           <section className="gallery">
+            // Good use of map here and in other components to keep files small and readable.
             {
               exhibit.map((submission, index) => {
                 return (

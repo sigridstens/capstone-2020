@@ -9,6 +9,7 @@ function Footer() {
           <nav className="navigation footer-nav col-half">
             <ul>
               <li className="nav-item">
+                {/* Remove empty html attributes*/}
                 <Link to="/" className=''>Collection</Link>
               </li>
               <li className="nav-item">

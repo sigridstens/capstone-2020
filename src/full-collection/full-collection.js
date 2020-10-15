@@ -4,6 +4,7 @@ import Circle from "../shared/circle/circle";
 import {Link} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 
+// This massive data piece could be in a separate JSON file and imported to make this component/file easier to read.
 export const submissions = [
   {
     image: "/collage-submission.jpg",

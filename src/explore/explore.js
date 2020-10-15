@@ -22,7 +22,6 @@ function Explore() {
       {
         image: "/friendship-submission.jpg"
       },
-
       {
         image: "/porch-submission.jpg"
       },
@@ -50,6 +49,7 @@ function Explore() {
               }
             </section>
 
+            {/* a link has a classname button? I find this confusing. Do all links look like regular buttons?*/}
             <Link to="/full-collection" className="button">browse experiences</Link>
 
             <EmShape/>
