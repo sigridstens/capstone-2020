@@ -5,6 +5,7 @@ import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import {submissions} from "../full-collection/full-collection";
 
 function Submission() {
+  // Does id ever change? Can it be const?
   let { id } = useParams();
   // find id in submissions
   const submission = submissions.find(function (submission) {
@@ -13,6 +14,7 @@ function Submission() {
 
   return (
     <main className= "submission">
+        {/* Formatting is inconsistent. Why is section tabbed in more?*/}
         <section>
           <p className="breadcrumbs">
             <Link to="/full-collection">Entire Collection</Link>

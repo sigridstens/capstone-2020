@@ -4,6 +4,9 @@ import EmShape from "../shared/em-shape/emShape";
 import {Link} from 'react-router-dom';
 
 
+// Inside the particpate folder you could create several components so this file is not so large. Find a way to break it into components.
+// <section className=" content-section col-container pullquote"> and <div className="col-text"> are used a lot.
+// You could break that into a wrapper component with an optional addedClasses prop.
 function Participate() {
     return(
       <main className="participate">
@@ -32,6 +35,7 @@ function Participate() {
         <section className=" content-section col-container pullquote center-container">
           <div className="rectangle-shape shape"/>
           <div className="col-text">
+            line is too long.
             <p className="center">We each have a unique perspective of our experiences. There is no “one right way” to be creative.</p>
           </div>
         </section>
@@ -39,7 +43,8 @@ function Participate() {
         <section className=" content-section col-container pullquote">
           <div className="col-text">
             <div className="brown-rectangle"/>
-              <p>TheMoLE encourages people to use creativity to help process their feelings about missed opportunities—even if they don’t identify as an “artist.”</p>
+            line is too long.
+            <p>TheMoLE encourages people to use creativity to help process their feelings about missed opportunities—even if they don’t identify as an “artist.”</p>
             </div>
         </section>
 
@@ -47,7 +52,7 @@ function Participate() {
           <div className="col-text">
             <div className="red-rectangle"/>
             <div className="yellow-triangle-shape shape"/>
-            <h4>How to participate</h4>
+            <h4>How to participate</h4>                                                       Extra space, line is too long.
             <p>To participate, make a creative representation of a lost experience in your life,  like a shift in your routine after some life change, a lost job, lost opportunity, lost moment, or lost relationship.</p>
 
             <p>For more examples, check out the <Link to="/explore">collection</Link> to see what others have submitted.</p>
@@ -60,6 +65,7 @@ function Participate() {
             <p>When your lost experience is ready, take a photo or video of it and submit it here!</p>
 
             <form>
+              {/* All of these input names could be more specific. submission-title...*/}
               <div className="form-row">
                 <label htmlFor="title">Submission Title:</label>
                 <input type="text" id="title" name="title" placeholder="What is is the title of your experience?" />
@@ -79,6 +85,7 @@ function Participate() {
           </div>
         </section>
 
+        {/*Delete this or add a TODO for later task*/}
         {/*<section className=" content-section col-container pullquote align-right">
           <div className="col-text ">
             <p>Want more flexibility? You can use any medium that can be sent by mail to the Museum of Lost Experiences collection location:</p>

@@ -21,3 +21,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# intellij files such as /iml files and the .idea folder should be included here. Those are specific to your machine not this project.

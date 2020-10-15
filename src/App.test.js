@@ -7,3 +7,6 @@ test('renders learn react link', () => {
   const linkElement = getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+// Write more tests or remove this. Or add a comment like
+ // TODO write component tests for basically everything

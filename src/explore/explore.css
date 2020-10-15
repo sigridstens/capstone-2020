@@ -43,6 +43,7 @@
     transform: scale(1.6);
 }
 
+/* Is this part of the gallery component or explore*/
 .gallery-preview {
     display: flex;
     flex-flow: row wrap;

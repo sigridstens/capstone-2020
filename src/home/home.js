@@ -12,6 +12,7 @@ function Home() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    // A comment explaining what this function does would be helpful.
     const interval = setInterval(() => {
       setIndex(index => {
         return index === wordCarousel.length - 1 ? 0 : index + 1;
@@ -35,9 +36,11 @@ function Home() {
 
             <Link to="/participate" className="button center">participate</Link>
 
+            {/*Dont add empty attribbutes*/}
             <div className="">
               <EmShape className="em-shape shape"/>
 
+              {/*Formatting is off here*/}
             <div className="rectangle shape"></div>
             </div>
           </div>

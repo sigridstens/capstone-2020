@@ -51,6 +51,7 @@
     color: white;
 }
 
+/* Why is this here and not in gallery? */
 .gallery {
     display: flex;
     flex-flow: row wrap;

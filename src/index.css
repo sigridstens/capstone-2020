@@ -4,3 +4,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Why is there an index.css and App.css and normalize.css ? Can these be consolidated? index and App both have body styles. */

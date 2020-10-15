@@ -20,6 +20,9 @@ const isLocalhost = Boolean(
     )
 );
 
+// Either write a service worker or remove this file. Any extra files can cause the project to be confusing for other coders and bloated in general
+
+
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
