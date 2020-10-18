@@ -1,7 +1,7 @@
 /* Header Styles */
 header {
     width: 100%;
-    padding: 3em 4em 1em 4em;
+    padding: 1.5em 1em 0 1em;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -10,7 +10,7 @@ header {
 }
 
 .logo {
-    width: 75%;
+    width: 10em;
     border-bottom: none;
 }
 
@@ -19,6 +19,7 @@ header a {
     color: var(--darkgreen);
 }
 
+/* Navigation Styles*/
 .main-nav {
     display: flex;
 }
@@ -32,8 +33,9 @@ header a {
 
 .main-nav .nav-item {
     position: relative;
-    margin:.5em 1em;
+    margin:.5em;
     padding: 0 0 .1em 0;
+    font-size: .8em;
 }
 
 .main-nav ul ul {
@@ -54,11 +56,38 @@ header a {
     position: relative;
 }
 
-a.main-nav-active-link::after {
+.navigation a {
+    border-bottom: none;
+    width: fit-content;
+    padding: 0;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: -.25em;
+    left: 0;
+    background-color: var(--red);
+}
+
+.navigation li a:hover::after {
+    visibility: visible;
+    width: 100%;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.navigation a.main-nav-active-link::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 7px;
+    height: 5px;
     bottom: -.25em;
     left: 0;
     background-color: var(--red);
@@ -82,7 +111,7 @@ a.main-nav-active-link::after {
 
 .sub-nav .sub-nav-item::after {
     background-color: var(--white);
-    height: 7px;
+    height: 5px;
     bottom: .15em;
 }
 
@@ -102,4 +131,130 @@ header .rectangle-shape {
     width: 100%;
     background-color: var(--pink);
     top: 0;
+}
+
+header .main-nav .menu-icon, header .main-nav .close-icon {
+    display: none;
+}
+
+
+/*Tablet Sized Screens*/
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .main-nav .menu-icon {
+        display: block;
+        position: absolute;
+        top: 2.5em;
+        right: 1em;
+        font-size: 1.25em;
+        color: var(--brown);
+    }
+
+    header .main-nav ul {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    header .main-nav .nav-item .sub-nav {
+        height: fit-content;
+        position: relative;
+    }
+
+    header .main-nav ul li {
+        position: relative;
+        margin: .5em 1em;
+    }
+
+    header .logo {
+        margin: auto;
+        width: 100%;
+    }
+
+    header h1 {
+        max-width: 9em;
+    }
+
+    header h2 {
+        font-size: .9em;
+    }
+
+    header .main-nav.nav-open {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: var(--darkgreen);
+        padding: 3em 2em;
+        color: white;
+    }
+
+    header a {
+        color: white;
+    }
+
+    header .main-nav.nav-open ul {
+        display: flex;
+        top: 0;
+        align-self: flex-start;
+    }
+
+    header .main-nav.nav-open ul ul {
+        display: block;
+    }
+
+
+    header .main-nav.nav-open .menu-icon {
+        display: none;
+    }
+
+    header .main-nav.nav-open .close-icon {
+        display: block;
+        position: absolute;
+        top: 1.5em;
+        right: 1.5em;
+    }
+
+    .nav-item:hover .sub-nav {
+        display: block;
+        text-align: left;
+        background-color: transparent;
+        padding: 0;
+        transform: translateX(0);
+    }
+
+    a.main-nav-active-link {
+        width: fit-content;
+    }
+
+    .navigation a{
+        position: relative;
+    }
+
+    .navigation li a::after, .navigation li a:hover::after, .navigation a.main-nav-active-link::after {
+        bottom: unset;
+        top: 1.25em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        width: 100vw;
+        padding: 1.5em .5em .5em .5em;
+    }
+
+    h1 {
+        width: 85%;
+    }
+
+    header .main-nav .menu-icon{
+        top: 2em;
+        right: .75em;
+    }
 }

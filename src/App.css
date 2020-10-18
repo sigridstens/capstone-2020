@@ -138,33 +138,6 @@ em {
     width: 100vw
 }
 
-.navigation a {
-    border-bottom: none;
-    width: fit-content;
-    padding: 0;
-}
-
-.navigation ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.navigation li::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 7px;
-    bottom: -.25em;
-    left: 0;
-    background-color: var(--red);
-}
-
-.navigation li:hover::after {
-    visibility: visible;
-    width: 100%;
-    transition: all 0.4s ease-in-out 0s;
-}
-
 /* Shapes Section */
 .shape {
     position: absolute;

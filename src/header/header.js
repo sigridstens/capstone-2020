@@ -5,12 +5,17 @@ import {submissions} from "../full-collection/full-collection";
 
 
 const Navigation = (props) => {
-    //const [windowSize, setWindowSize] = useState(window.innerWidth);
     const [route, setRoute] = useState('');
 
     useEffect(() => {
         setRoute(props.location.pathname);
     }, [props.location]);
+
+    function toggleNav() {
+        const mainNav = document.getElementsByClassName("main-nav")[0];
+
+        mainNav.classList.toggle("nav-open");
+    }
 
     let getRandomURL = () => {
         let randomSubmission = Math.floor((Math.random() * submissions.length));
@@ -31,29 +36,31 @@ const Navigation = (props) => {
                 </h1>
 
                 <nav className="navigation main-nav">
+                    <i className="fas fa-bars menu-icon" onClick={toggleNav}/>
+                    <i className="fas fa-times close-icon" onClick={toggleNav}/>
                     <ul>
                         <li className="nav-item">
-                            <Link to="/explore" className={` ${route === '/explore' ? 'main-nav-active-link' : ''}`}>Explore</Link>
+                            <Link to="/explore" className={` ${route === '/explore' ? 'main-nav-active-link' : ''}`} onClick={toggleNav}>Explore</Link>
                             <ul className="sub-nav">
-                                <li className="sub-nav-item">
+                                <li className="sub-nav-item" onClick={toggleNav}>
                                     <Link to="/full-collection">Full Collection</Link>
                                 </li>
 
-                                <li className="sub-nav-item">
+                                <li className="sub-nav-item" onClick={toggleNav}>
                                     <Link to="/current-exhibits">Exhibits</Link>
                                 </li>
 
-                                <li className="sub-nav-item">
+                                <li className="sub-nav-item" onClick={toggleNav}>
                                     <Link to={getRandomURL()}>Random Submission</Link>
                                 </li>
 
                             </ul>
                         </li>
-                        <li className="nav-item">
-                            <Link to="/participate" className={`${route === '/participate' ? 'main-nav-active-link' : ''}`}>Participate</Link>
+                        <li className="nav-item" >
+                            <Link to="/participate" className={`${route === '/participate' ? 'main-nav-active-link' : ''}`} onClick={toggleNav}>Participate</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/about" className={`${route === '/about' ? 'main-nav-active-link' : ''}`}>About</Link>
+                            <Link to="/about" className={`${route === '/about' ? 'main-nav-active-link' : ''}`} onClick={toggleNav}>About</Link>
                         </li>
                     </ul>
                 </nav>

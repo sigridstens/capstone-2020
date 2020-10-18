@@ -15,8 +15,6 @@ function Submission() {
     <main className= "submission">
         <section>
           <p className="breadcrumbs">
-            <Link to="/full-collection">Entire Collection</Link>
-            <span> > </span>
             <Link to="/current-exhibits">Exhibits</Link>
             <span> > </span>
             <Link to={`/exhibit/${submission.exhibitName}`}>{submission.exhibitName}</Link>
