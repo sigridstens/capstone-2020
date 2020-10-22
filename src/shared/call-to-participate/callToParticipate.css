@@ -1,5 +1,5 @@
 .call-to-participate {
-    margin: 16em 0 3em 0;
+    margin: 5em 0 3em 0;
 }
 
 .rectangle-shape {
@@ -11,8 +11,13 @@
 }
 
 .blue-circle-shape {
-    right: -6.5em;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 85vw;
+    top: 5em;
 
+}
+
+@media screen and (max-width: 768px) {
+    .call-to-participate {
+        margin: 0 0 3em 0;
+    }
 }
