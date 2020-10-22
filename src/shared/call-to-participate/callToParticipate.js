@@ -1,11 +1,10 @@
 import React from 'react';
 import './callToParticipate.css';
-import Circle from "../circle/circle";
-import {Link, withRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function CallToParticipate() {
   return (
-    <section className="content-section call-to-participate">
+    <main className="content-section call-to-participate">
       <div className="rectangle-shape shape"/>
 
       <div className="col-text">
@@ -17,7 +16,7 @@ function CallToParticipate() {
 
       <div className="blue-circle-shape shape">
       </div>
-    </section>
+    </main>
   )
 }
 
