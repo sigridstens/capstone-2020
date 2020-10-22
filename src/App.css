@@ -72,20 +72,19 @@ h1 {
 
 h2 {
     font-family: fatfrank, sans-serif;
-    font-size: 2em;
     color: var(--darkgreen);
 }
 
 h3 {
     font-family: fatfrank, sans-serif;
-    font-size: 1em;
+    font-size: .95em;
     color: var(--yellow);
     margin: .25em 0;
 }
 
 h4 {
     font-family: fatfrank, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: var(--darkgreen);
     margin: .25em 0 1em 0;
 }
@@ -108,9 +107,6 @@ em {
     line-height: 1.5;
 }
 
-.pullquote {
-}
-
 .center-container {
     display: flex;
     flex-direction: column;
@@ -121,11 +117,10 @@ em {
 
 .col-container {
     display: flex;
-
 }
 
 .col-text {
-    width: 52%;
+    width: 20em;
 }
 
 .col-half {
@@ -133,9 +128,10 @@ em {
 }
 
 .content-section {
-    padding: 10rem 15%;
+    padding: 5rem 15%;
     position: relative;
-    width: 100vw
+    width: 100vw;
+    min-height: 20em;
 }
 
 /* Shapes Section */
@@ -153,8 +149,8 @@ em {
 .yellow-triangle-shape {
     width: 0;
     height: 0;
-    border-top: 20em solid var(--yellow);
-    border-right: 20em solid transparent;
+    border-top: 40em solid var(--yellow);
+    border-right: 40em solid transparent;
 }
 
 /* Filtering Styles */
@@ -169,4 +165,38 @@ em {
     font-size: 1.25rem;
     color: var(--white);
     width: fit-content;
+}
+
+
+/*Tablet Sized Screens*/
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100vw;
+    }
+    .col-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-text {
+        width: 50vw;
+    }
+
+    .col-half {
+        flex-basis: 70vw;
+    }
+
+    .content-section {
+        padding: 5rem 15%;
+        position: relative;
+        width: 100vw;
+        min-height: 20em;
+    }
+}
+
+@media screen and (max-width: 480px) {
 }
