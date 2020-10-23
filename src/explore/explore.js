@@ -9,55 +9,55 @@ import {exhibitNames, exhibits} from "../exhibits-overview/exhibits-overview";
 
 
 function Explore() {
-    const data = [
-      {
-        image: "/bulletin-submission.jpg"
-      },
-      {
-        image: "/camping-submission.jpg"
-      },
-      {
-        image: "/family-submission.jpg"
-      },
-      {
-        image: "/friendship-submission.jpg"
-      },
+  const data = [
+    {
+      image: "/bulletin-submission.jpg"
+    },
+    {
+      image: "/camping-submission.jpg"
+    },
+    {
+      image: "/family-submission.jpg"
+    },
+    {
+      image: "/friendship-submission.jpg"
+    },
 
-      {
-        image: "/porch-submission.jpg"
-      },
-      {
-        image: "/travel-submission.jpg"
-      }
-    ];
+    {
+      image: "/porch-submission.jpg"
+    },
+    {
+      image: "/travel-submission.jpg"
+    }
+  ];
 
-    return(
-        <main className="explore">
-          <ExhibitPreview exhibit={exhibits[exhibitNames[0]]}/>
+  return(
+    <main className="explore">
+      <ExhibitPreview exhibit={exhibits[exhibitNames[0]]}/>
 
-          <section className="content-section collection-preview">
-            <div className="brown-rectangle"/>
-            <div className="red-rectangle"/>
+      <section className="content-section collection-preview">
+        <div className="brown-rectangle"/>
+        <div className="red-rectangle"/>
 
-            <h4>Entire Collection</h4>
-            <section className="gallery-preview">
-              {
-                data.map((submission, index) => {
-                  return (
-                    <Circle key={index} backgroundImage={submission.image}/>
-                  )
-                })
-              }
-            </section>
+        <h4>Entire Collection</h4>
+        <section className="gallery-preview">
+          {
+            data.map((submission, index) => {
+              return (
+                <Circle key={index} backgroundImage={submission.image}/>
+              )
+            })
+          }
+        </section>
 
-            <Link to="/full-collection" className="button">browse experiences</Link>
+        <div className="col-container">
+          <Link to="/full-collection" className="button">browse experiences</Link>
+        </div>
+      </section>
 
-            <EmShape/>
-          </section>
-
-          <CallToParticipate/>
-        </main>
-    )
+      <CallToParticipate/>
+    </main>
+  )
 }
 
 export default Explore;

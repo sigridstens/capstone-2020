@@ -1,3 +1,7 @@
+.filtering {
+    padding-right: 3em;
+}
+
 .filtering h5{
     margin: 0;
     padding: .03em 1em 0 0;
@@ -47,13 +51,15 @@ ul.filter-nav.nav-open {
 .filtering ul li:hover .filter-options {
     display: block;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
     text-align: center;
     z-index: 10;
     background-color: var(--yellow);
     color: var(--darkgreen);
     padding: 1em 1.5em;
-    transform: translateX(-5%);
+    width: 10em;
 }
 
 .filter-options li::after {
@@ -70,6 +76,35 @@ ul.filter-nav.nav-open {
     visibility: visible;
     width: 100%;
     transition: width 0.4s ease-in-out 0s;
+}
+
+.filtering ul li li:hover {
+    color: var(--darkgreen);
+}
+
+.modalOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.54);
+}
+
+.confirmationModal {
+    border: 3px solid var(--pink);
+    border-top: 1em solid var(--pink);
+    background-color: white;
+    padding: 2em 3em;
+    width: 30em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.openModal {
+    display: block;
+
 }
 
 

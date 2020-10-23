@@ -1,85 +1,204 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './participate.css';
 import EmShape from "../shared/em-shape/emShape";
 import {Link} from 'react-router-dom';
+import axios from "axios";
 
 
 function Participate() {
-    return(
-      <main className="participate">
-        <section className="hero content-section col-container">
-          <div className="col-text">
-            <h4>Do you have a lost experience to share?</h4>
-            <p>Everyone has lost experiences.</p>
-          </div>
+  const [state, setState] = useState({
+    fileData: null,
+    name: undefined,
+    sanitizedName: undefined
+  });
+  const [loading, setLoading] = useState(false);
 
-          <div className="relative circle-container">
-            <p className="circle-text">Some of them are big and easy to notice.</p>
-          </div>
-        </section>
+  // On file select (from the pop up)
+  const onFileChange = event => {
+    const newName = event.target.files[0].name;
+    const fileDataURL = file => new Promise((resolve,reject) => {
+      let fr = new FileReader();
+      fr.onload = () => resolve( fr.result);
+      fr.onerror = reject;
+      fr.readAsDataURL( file)
+    });
+    fileDataURL( event.target.files[0])
+      .then( data => {
+        setState({fileData: data, name: newName})
+      });
+  };
 
-        <section className=" content-section section-two col-container">
-          <div className="col-text">
-            <img className="multiple-circle" src={process.env.PUBLIC_URL + "/multiple-shapes@2x.png"}/>
-          </div>
+  // On file upload (click the upload button)
+  const onFileUpload = async () => {
+    const nameParts = state.name.split('.');
+    let fileType = 'jpeg';
+    const sanitizedName = nameParts[0].replace(/[^a-zA-Z0-9]/g, '');
 
-          <div className="col-text col-two">
-            <p>While some are so small or routine it is difficult to see how much their loss affects us.</p>
-          </div>
-        </section>
+    const response = await axios.get(`https://1kvi0gug9i.execute-api.us-east-1.amazonaws.com/beta/files?fileName=${sanitizedName}&fileType=${nameParts[1]}`);
+    const binary = atob(state.fileData.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));
+    const arr = [];
+    for ( let i = 0; i < binary.length; i++) {
+      arr.push(binary.charCodeAt(i));
+    }
+    if (nameParts[1] === 'png') {
+      fileType = 'png';
+    }
+    const blobData = new Blob([new Uint8Array(arr)], {type: `image/${fileType}`});
+    setLoading(true);
+    await axios.put(response.data.uploadURL, blobData).then(() => {
+      setState({...state, sanitizedName: sanitizedName + '.' + nameParts[1]});
+    }).finally(() => {
+      setLoading(false);
+    });
+  };
 
-        <section className=" content-section col-container center-container">
-          <div className="rectangle-shape shape"/>
-          <div className="col-text">
-            <p className="center">We each have a unique perspective of our experiences. There is no “one right way” to be creative.</p>
-          </div>
-        </section>
+  const fileData = () => {
+    if (state.sanitizedName && !loading) {
+      return (
+        <div>
+          <h2>Image Uploaded</h2>
+          <img src={`https://photo-test-kjg01.s3.amazonaws.com/${state.sanitizedName}`} style={{ height: '140px', width: '140px'}}/>
+        </div>
+      );
+    } else if (loading) {
+      return (
+        <div>
+          <br />
+          <h4>loading</h4>
+        </div>
+      );
+    } else {
+      return (<></>);
+    }
+  };
 
-        <section className=" content-section col-container">
-          <div className="col-text">
-            <div className="brown-rectangle"/>
-              <p>TheMoLE encourages people to use creativity to help process their feelings about missed opportunities—even if they don’t identify as an “artist.”</p>
+  const openConfirmationModal = () => {
+    document.getElementsByClassName("modalOverlay")[0].classList.toggle("openModal");
+    document.getElementsByClassName("confirmationModal")[0].classList.toggle("openModal");
+  }
+
+  return(
+    <main className="participate">
+      <div className="modalOverlay"/>
+      <section className="hero content-section col-container">
+        <div className="col-text">
+          <h4>Do you have a lost experience to share?</h4>
+          <p>Everyone has lost experiences.</p>
+        </div>
+
+        <div className="relative circle-container">
+          <p className="circle-text">Some of them are big and easy to notice.</p>
+        </div>
+      </section>
+
+      <section className=" content-section section-two col-container">
+        <div className="col-text">
+          <img className="multiple-circle" src={process.env.PUBLIC_URL + "/multiple-shapes@2x.png"}/>
+        </div>
+
+        <div className="col-text col-two">
+          <p>While some are so small or routine it is difficult to see how much their loss affects us.</p>
+        </div>
+      </section>
+
+      <section className=" content-section col-container center-container">
+        <div className="rectangle-shape shape"/>
+        <div className="col-text">
+          <p className="center">We each have a unique perspective of our experiences. There is no “one right way” to be creative.</p>
+        </div>
+      </section>
+
+      <section className=" content-section col-container">
+        <div className="col-text">
+          <div className="brown-rectangle"/>
+          <p>TheMoLE encourages people to use creativity to help process their feelings about missed opportunities—even if they don’t identify as an “artist.”</p>
+        </div>
+        <div className="red-rectangle"/>
+      </section>
+
+      <section className=" content-section col-container participation-details">
+        <div className="yellow-triangle-shape shape"/>
+
+        <div className="col-text">
+          <h4>How to participate</h4>
+          <p>To participate, make a creative representation of a lost experience in your life,  like a shift in your routine after some life change, a lost job, lost opportunity, lost moment, or lost relationship.</p>
+
+          <p>For more examples, check out the <Link to="/explore">collection</Link> to see what others have submitted.</p>
+        </div>
+      </section>
+
+      <section className=" content-section col-container">
+        <div className="col-text submission-form">
+          <EmShape/>
+          <p>When your lost experience is ready, take a photo or video of it and submit it here!</p>
+
+          <form>
+            <div className="form-row file-upload-section">
+              <label htmlFor="submission-file">Submission Image or Video:</label>
+              <input type="file" onChange={onFileChange} className="file-input"/>
             </div>
-          <div className="red-rectangle"/>
-        </section>
+            <div className="form-row">
+              <label htmlFor="title">Submission Title:</label>
+              <input type="text" id="title" name="title" placeholder="What is your submission title?" />
+            </div>
 
-        <section className=" content-section col-container participation-details">
-          <div className="yellow-triangle-shape shape"/>
+            <div className="form-row">
+              <label htmlFor="medium">Medium:</label>
+              <select id="medium" name="medium">
+                <option value="drawing">drawing</option>
+                <option value="painting">painting</option>
+                <option value="collage">collage</option>
+                <option value="digital">digital art</option>
+                <option value="sculpture">sculpture</option>
+                <option value="textile">fabric, yarn, thread, or textile</option>
+                <option value="music">music or sound</option>
+                <option value="photography">photography</option>
+                <option value="technology">technology</option>
+                <option value="technology">food</option>
+                <option value="other">other</option>
+              </select>
+            </div>
 
-          <div className="col-text">
-            <h4>How to participate</h4>
-            <p>To participate, make a creative representation of a lost experience in your life,  like a shift in your routine after some life change, a lost job, lost opportunity, lost moment, or lost relationship.</p>
+            <div className="form-row">
+              <label htmlFor="description">Short Submission Description (optional):</label>
+              <textarea type="text" id="description" name="description" />
+            </div>
 
-            <p>For more examples, check out the <Link to="/explore">collection</Link> to see what others have submitted.</p>
-          </div>
-        </section>
+            <div className="form-row">
+              <label htmlFor="name">Your name (optional):</label>
+              <input type="text" id="name" name="name" placeholder="What's your name (if you'd like to include it)?" />
+            </div>
 
-        <section className=" content-section col-container">
-          <div className="col-text submission-form">
-            <EmShape/>
-            <p>When your lost experience is ready, take a photo or video of it and submit it here!</p>
+            <div className="form-row">
+              <label htmlFor="age">Your Age:</label>
+              <select id="age" name="age">
+                <option value="under 20">under 20</option>
+                <option value="21-30">21-30</option>
+                <option value="31-40">31-40</option>
+                <option value="41-50">41-50</option>
+                <option value="51-60">51-60</option>
+                <option value="61-70">61-70</option>
+                <option value="71-80">71-80</option>
+                <option value="over 80">over 80</option>
+              </select>
+            </div>
 
-            <form>
-              <div className="form-row">
-                <label htmlFor="title">Submission Title:</label>
-                <input type="text" id="title" name="title" placeholder="What is your submission title?" />
-              </div>
-              <div className="form-row">
-                <label htmlFor="medium">Medium:</label>
-                <input type="text" id="medium" name="medium" placeholder="What materials did you use?" />
-              </div>
+            <input type="button" value="submit" className="form-row button" onClick={openConfirmationModal}/>
+          </form>
 
-              <div className="form-row">
-                <label htmlFor="description">Optional Description:</label>
-                <textarea type="text" id="description" name="description" />
-              </div>
-
-              <input type="submit" value="submit" className="form-row button" />
-            </form>
-          </div>
-        </section>
-      </main>
-    )
+          <aside className="confirmationModal">
+            <div className="relative">
+            <i className="fas fa-times close-icon" onClick={openConfirmationModal}/>
+            <h3>Submission received!</h3>
+            <h4>Thanks for adding your lost experience to the museum!</h4>
+            <Link to="#">You can find your submission here.</Link>
+            <p>If you have time, check out others' submissions in the <Link to="/full-collection">collection</Link> or connect with others by sharing your submission on social media by tagging it #WeAllHaveLostExperiences.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  )
 }
 
 export default Participate;

@@ -1,5 +1,6 @@
 .participate {
     padding-top: 5em;
+    position: relative;
 }
 
 .relative {
@@ -99,12 +100,34 @@ textarea {
     height: 10em;
 }
 
+label {
+    font-weight: bold;
+    color: var(--red);
+}
 
 button, input[type="submit"], input[type="reset"] {
     border: none;
     padding: .85rem 1.25rem;
     cursor: pointer;
 }
+
+
+.file-input {
+    width: fit-content;
+}
+
+.upload-button {
+    display: inline;
+    font-size: .75em;
+}
+
+.participate .close-icon {
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    color: var(--darkgreen);
+}
+
 
 
 /*Small Screen Sizes*/

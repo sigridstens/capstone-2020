@@ -12,8 +12,8 @@
 
 .collection-preview {
     height: 50em;
-    padding-top: 17em;
-    padding-bottom: 3em;
+    padding-top: 15em;
+    padding-bottom: 5em;
 }
 
 .collection-preview h4 {
@@ -46,7 +46,7 @@
 .gallery-preview {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 3em;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .collection-preview a.button {
-    margin: 8.5em;
+    margin: auto;
 }
 
 
