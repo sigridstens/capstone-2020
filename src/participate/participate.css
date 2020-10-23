@@ -1,26 +1,30 @@
 .participate {
-    padding-top: 10em;
+    padding-top: 5em;
 }
 
 .relative {
     position: relative;
 }
 
-.participate .blue-circle-shape {
-    right: 50%;
-    transform: translateX(50%) scale(1.5);
-    top: 2em;
+.participate .content-section {
+    align-items: center;
 }
 
 .circle-text {
-    position: absolute;
-    top: -3em;
+    transform:translate(2em, 8em);
     background-color: var(--blue);
-    padding: 11em 7.25em;
-    height: 25em;
-    width: 25em;
+    padding: 9em 4.75em;
+    height: 20em;
+    width: 20em;
     border-radius: 100%;
     color: white;
+    font-size: 1.85vw;
+    line-height: 2.2vw;
+}
+
+.participate .hero {
+    height: fit-content;
+    padding: 0 15%;
 }
 
 .participate .multiple-circle {
@@ -42,21 +46,25 @@
     top: 0;
     right: auto;
     left: 0;
+    height: 3em;
 }
 
 .participate .red-rectangle {
     left: auto;
     right: 0;
-    top: -5.5em;
-    width: 48.5%;
+    width: 50vw;
+    height: 2em;
+    top: unset;
+    bottom: 0;
 }
 
 .participate .yellow-triangle-shape {
-    top: 8em;
+    top: 0;
 }
 
 .participate .participation-details {
     justify-content: flex-end;
+    padding-top: 8em;
 }
 
 .participate .center-container {
@@ -69,6 +77,10 @@
     justify-content: flex-end;
 }
 
+.participate .em-shape {
+    left: 70vw;
+}
+
 .form-row {
     margin: 1em 0;
 }
@@ -79,6 +91,14 @@
     color: var(--darkgreen);
 }
 
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10em;
+}
+
 
 button, input[type="submit"], input[type="reset"] {
     border: none;
@@ -86,5 +106,134 @@ button, input[type="submit"], input[type="reset"] {
     cursor: pointer;
 }
 
-.form-row.button {
+
+/*Small Screen Sizes*/
+@media screen and (max-width: 900px) {
+    .participate {
+        padding-top: 10em;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .circle-text {
+        transform: translate(0, 0);
+        background-color: var(--blue);
+        padding: 9em 4.75em;
+        height: 50vw;
+        width: 50vw;
+        border-radius: 100%;
+        color: white;
+        font-size: 2.5vw;
+        line-height: 3.0vw;
+    }
+
+    .participate .participation-details {
+        padding-top: 8em;
+        font-size: .9em;
+    }
+
+    .participate .col-container.participation-details .col-text {
+        width: 50vw;
+    }
+
+    .participate .col-container.participation-details {
+        align-items: flex-end;
+    }
+
+    .participate .em-shape {
+        visibility: hidden;
+    }
+
+    .submission-form {
+        width: 70vw;
+    }
+}
+
+/*Tablet screen sizes*/
+@media screen and (max-width: 768px) {
+    .participate {
+        padding-top: 10em;
+    }
+
+    .participate .col-container {
+        justify-content: center;
+    }
+
+    .participate .col-container.participation-details {
+        justify-content: flex-end;
+    }
+
+    .participate .col-text {
+        width: 70vw;
+    }
+
+    .participate h4 {
+        width: 70vw;
+    }
+
+    .circle-text {
+        transform:translate(0, 0);
+        background-color: var(--blue);
+        padding: 8.5em 3.9em;
+        height: 65vw;
+        width: 65vw;
+        border-radius: 100%;
+        color: white;
+        font-size: 3.5vw;
+        line-height: 4.5vw;
+    }
+}
+
+/*Mobile screen sizes*/
+@media screen and (max-width: 480px) {
+    .participate {
+        padding-top: 7.5em;
+    }
+
+    .participate .content-section {
+        min-height: fit-content;
+    }
+
+    .participate .content-section:nth-of-type(2) {
+        padding: 1em 15%;
+    }
+
+    .participate .content-section:nth-of-type(5) {
+        padding-bottom: 0;
+    }
+
+    .participate .content-section:nth-of-type(6) {
+        padding: 0 15%;
+    }
+
+    .participate .col-container.participation-details .col-text {
+        width: 70vw;
+    }
+
+    .participate .col-text p {
+        font-size: .75em;
+        line-height: 1.5em;
+    }
+
+    .participate .col-text {
+        width: 70vw;
+    }
+
+    .circle-text {
+        transform:translate(0, 0);
+        background-color: var(--blue);
+        padding: 9em 4.75em;
+        height: 80vw;
+        width: 80vw;
+        border-radius: 100%;
+        color: white;
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+
+    form {
+        font-size: .85em;
+    }
 }

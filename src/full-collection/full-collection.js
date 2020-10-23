@@ -1,15 +1,15 @@
 import React from 'react';
 import './full-collection.css';
 import Circle from "../shared/circle/circle";
-import {Link} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
+import SubmissionFiltering from "../shared/submission-filtering/submission-filtering";
 
 export const submissions = [
   {
     image: "/collage-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Office Life",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission",
@@ -31,7 +31,7 @@ export const submissions = [
     image: "/fashion-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Girls Nights In",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission3",
@@ -41,7 +41,7 @@ export const submissions = [
     image: "/family-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Summer Nights with Family",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission4",
@@ -52,7 +52,7 @@ export const submissions = [
     image: "/camping-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Spontaneous Bike Trips",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission5",
@@ -63,7 +63,7 @@ export const submissions = [
     image: "/travel-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Touring the Coast",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission6",
@@ -73,7 +73,7 @@ export const submissions = [
     image: "/painting-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Serenity",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission7",
@@ -84,7 +84,7 @@ export const submissions = [
     image: "/porch-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Porch Sitting with Friends",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission8",
@@ -95,7 +95,7 @@ export const submissions = [
     image: "/friendship-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "My Ladies",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission9",
@@ -105,7 +105,7 @@ export const submissions = [
     image: "/collage-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Office Banter",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission10",
@@ -127,7 +127,7 @@ export const submissions = [
     image: "/fashion-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
     keywords: "",
-    title: "Lost in the Crowd",
+    title: "Literally Everything",
     medium: "collage mixed media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
     linkpath: "/submission/submission12",
@@ -135,42 +135,6 @@ export const submissions = [
 
   },
   {
-    image: "/collage-submission.jpg",
-    exhibitName: "Summer Vacation",
-    keywords: "",
-    title: "Lost in the Crowd",
-    medium: "collage mixed media",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission",
-    exhibitLink: "/exhibit/summer-vacation"
-
-
-
-  },
-  {
-    image: "/crowd-submission.jpg",
-    exhibitName: "Summer Vacation",
-    keywords: "",
-    title: "Lost in the Crowd",
-    medium: "collage mixed media",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission2",
-    exhibitLink: "/exhibit/summer-vacation"
-
-
-  },
-  {
-    image: "/fashion-submission.jpg",
-    exhibitName: "Summer Vacation",
-    keywords: "",
-    title: "Lost in the Crowd",
-    medium: "collage mixed media",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex ipsum, tempor ac pulvinar id, aliquam nec eros. Sed vitae suscipit odio. Aliquam eget tempor neque, sed semper velit. Praesent nisi mi, tristique nec euismod quis, varius ac dolor. Donec pretium ex id pretium hendrerit. Phasellus pulvinar dictum efficitur. Aenean sodales, metus quis ornare vulputate, felis ex commodo est.",
-    linkpath: "/submission/submission3",
-    exhibitLink: "/exhibit/summer-vacation"
-
-
-  },    {
     image: "/family-submission.jpg",
     exhibitName: "Summer Vacation",
     keywords: "",
@@ -274,22 +238,25 @@ function FullCollection() {
   return (
     <main>
       <section className= "full-collection">
-        <div className="yellow-triangle-shape shape"></div>
-        <h3>Entire Collection</h3>
-        <h4>Lost Experiences</h4>
+        <div className="yellow-triangle-shape shape"/>
+        <div className="content-section">
+          <h3>Entire Collection</h3>
+          <h4>Lost Experiences</h4>
 
-        <nav className="filtering">
-          <h5>filter exhibit</h5>
-          <i className="fas fa-search search-icon"></i>
-          <ul>
-            <li>medium</li>
-            <li>submitter age</li>
-            <li>tags</li>
-            <li>sort by</li>
-          </ul>
-        </nav>
+          <SubmissionFiltering/>
+          {/*<nav className="filtering">
+            <h5>filter exhibit</h5>
+            <i className="fas fa-search search-icon"/>
+            <ul>
+              <li>medium</li>
+              <li>submitter age</li>
+              <li>tags</li>
+              <li>sort by</li>
+            </ul>
+          </nav>*/}
+        </div>
 
-        <section className="gallery">
+        <section className="submission-gallery">
           {
             submissions.map((submission, index) => {
               return (
@@ -298,9 +265,6 @@ function FullCollection() {
             })
           }
         </section>
-
-        <Link to="/collection" className="button exhibit-link">view exhibit</Link>
-
       </section>
 
       <CallToParticipate/>

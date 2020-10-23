@@ -1,11 +1,11 @@
 import React from 'react';
 import './footer.css';
-import {Link, withRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function Footer() {
     return(
-        <footer className="content-section">
+        <footer>
           <nav className="navigation footer-nav col-half">
             <ul>
               <li className="nav-item">

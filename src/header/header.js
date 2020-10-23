@@ -27,7 +27,6 @@ const Navigation = (props) => {
     const showNav = () => {
         return (
             <header>
-
                 <h1>
                     {/*🦐*/}
                     <Link to="/" className="logo">
@@ -72,9 +71,9 @@ const Navigation = (props) => {
 
 
         return(
-            <div>
+            <>
                 {showNav()}
-            </div>
+            </>
         )
 };
 

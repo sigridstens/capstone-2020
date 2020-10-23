@@ -1,8 +1,7 @@
 /* Footer Component Styles */
-footer.content-section {
+footer {
     background-color: var(--darkgreen);
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding: 4rem 4em 2rem 4em;
     width: 100%;
     color: white;
     display: flex;
@@ -10,6 +9,7 @@ footer.content-section {
 
 footer a {
     color: white;
+    position: relative;
 }
 
 .footer-nav li:not(:last-child) {
@@ -27,7 +27,6 @@ footer a {
 .social li {
     padding-left: 1em;
 }
-
 .right-side {
     text-align: right;
     display: flex;
@@ -38,4 +37,7 @@ footer a {
 .right-side p {
     font-size: .75em;
     margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
 }

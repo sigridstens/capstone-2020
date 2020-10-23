@@ -7,16 +7,19 @@ import EmShape from "../shared/em-shape/emShape";
 function About() {
     return(
       <main className="about">
-          <section className=" content-section col-container pullquote">
+          <section className=" content-section col-container">
             <div className="col-text">
               <p>The Museum of Lost Experiences (theMoLE) is a collection of crowd-sourced creative submissions on the subject of loss.
               </p>
             </div>
 
-            <EmShape className="em-shape shape"/>
+            <div>
+              <EmShape className="em-shape shape"/>
+              <div className="rectangle shape"/>
+            </div>
           </section>
 
-        <section className=" content-section col-container pullquote">
+        <section className=" content-section col-container">
 
           <div className="red-rectangle shape"/>
 
@@ -28,8 +31,8 @@ function About() {
           </div>
         </section>
 
-        <section className=" content-section col-container pullquote">
-          <div className="yellow-triangle-shape"/>
+        <section className="content-section col-container">
+          <div className="yellow-triangle-shape shape"/>
           <div className="col-text">
             <p>We all have experienced loss at some point in our lives. Exploring other people’s stories helps remind us we aren’t alone, even if each of our experiences of loss is unique.</p>
           </div>

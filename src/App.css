@@ -134,6 +134,22 @@ em {
     min-height: 20em;
 }
 
+main {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.submission-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0 5vw;
+}
+
+.submission-gallery .circle {
+    margin: 1em;
+}
+
 /* Shapes Section */
 .shape {
     position: absolute;
@@ -174,9 +190,6 @@ em {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        width: 100vw;
-    }
     .col-container {
         display: flex;
         flex-direction: column;

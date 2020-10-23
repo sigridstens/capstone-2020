@@ -1,0 +1,75 @@
+.filtering h5{
+    margin: 0;
+    padding: .03em 1em 0 0;
+    font-size: 1.25rem;
+}
+
+.filtering h5:hover {
+    color: var(--yellow);
+}
+
+.filtering ul {
+    font-family: forma-djr-deck, sans-serif;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.filtering ul li {
+    padding: 0 1em;
+    position: relative;
+}
+
+.filtering ul.filter-options li {
+    padding: .5em 1em;
+    text-align: center;
+    font-size: .8em;
+}
+
+.filtering .filter-options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 1.25em;
+    left: -.5em;
+}
+
+ul.filter-nav.nav-open {
+    display: inline-flex;
+}
+
+.filtering ul li:hover {
+    color: var(--yellow);
+}
+
+.filtering ul li:hover .filter-options {
+    display: block;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: var(--yellow);
+    color: var(--darkgreen);
+    padding: 1em 1.5em;
+    transform: translateX(-5%);
+}
+
+.filter-options li::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    z-index: 5;
+}
+
+.filter-options li:hover::after {
+    visibility: visible;
+    width: 100%;
+    transition: width 0.4s ease-in-out 0s;
+}
+
+

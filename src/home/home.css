@@ -34,9 +34,9 @@
 }
 
 .home .description {
-    margin: 2.5em 0;
-    font-size: 1.75rem;
-
+    font-size: 1.5rem;
+    display: flex;
+    height: 25em;
 }
 
 .rectangle {
@@ -44,11 +44,77 @@
     width: 100%;
     background-color: var(--darkgreen);
     top: 0;
-    visibility: hidden;
+    left: 85vw;
 }
 
-.em-shape {
-    right: 23.25em;
-    top: -2.5em;
-    transform: scale(1.01);
+.description .col-text {
+    margin: auto 0;
+}
+
+.home .call-to-participate {
+    margin-top: 10em;
+}
+
+/*Tablet Sized Screens*/
+@media screen and (max-width: 900px) {
+    .home .rectangle {
+        left: 95vw;
+    }
+
+    .home .description {
+        font-size: 1.2rem;
+    }
+
+    .home .col-text {
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: relative;
+    }
+
+    .hero h2 {
+        margin: auto;
+        font-size: 6vw;
+        text-align: center;
+        max-width: 65vw;
+    }
+
+    .hero .outlined {
+        -webkit-text-stroke: .035em var(--darkgreen);
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    }
+
+    .hero .rotating {
+        text-align: center;
+        left: 70vw;
+    }
+
+    .home .rectangle {
+        left: 100vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home .rectangle {
+       visibility: hidden;
+    }
+
+    .hero .rotating {
+        text-align: center;
+        left: unset;
+        right: -20;
+    }
+
+    .hero h2 {
+        margin: auto;
+        font-size: 8vw;
+        text-align: right;
+        max-width: 75vw;
+    }
 }

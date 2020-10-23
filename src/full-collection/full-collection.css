@@ -1,57 +1,24 @@
 .full-collection {
-    padding-top: 25em;
+    padding-top: 15em ;
+    position: relative;
+}
+
+.full-collection .content-section {
+    min-height: 0;
 }
 
 .full-collection .yellow-triangle-shape {
-    transform: scale(1);
-    top: 15em;
-    left: -2em;
-    border-top: 20em solid var(--darkgreen);
+    transform: scale(.5);
+    top: -2em;
+    left: -15em;
+    border-top: 40em solid var(--darkgreen);
 }
 
 .full-collection h3, .full-collection h4 {
-    padding: 0 15%;
+    padding: 0;
 }
 
 .full-collection h3 {
     color: var(--brown);
-}
-
-.full-collection .gallery {
-    padding: 5em 12%;
-}
-
-.filtering h5{
-    margin: 0;
-    padding: .03em 1em 0 0;
-    font-size: 1.25rem;
-}
-
-.filtering ul {
-    font-family: forma-djr-deck, sans-serif;
-    display: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.filtering ul li {
-    padding: 0 1em;
-}
-
-.filtering:hover ul {
-    display: inline-flex;
-
-}
-
-.full-collection .exhibit-link {
-    right: unset;
-    left: 10em;
-    background-color: var(--darkgreen);
-    color: white;
-}
-
-.gallery {
-    display: flex;
-    flex-flow: row wrap;
+    margin-top: 2em;
 }

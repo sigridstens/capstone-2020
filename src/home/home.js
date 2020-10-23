@@ -27,7 +27,7 @@ function Home() {
         <h2>Everyone has <span className="outlined">lost</span> <span className="hidden">experiences.</span>
           <span className="rotating">{wordCarousel[index]}</span>
         </h2>
-        <i className="fas fa-angle-down scroll-button"></i></section>
+        <i className="fas fa-angle-down scroll-button"/></section>
 
         <section className="content-section col-container description">
           <div className="col-text center-container">
@@ -35,10 +35,9 @@ function Home() {
 
             <Link to="/participate" className="button center">participate</Link>
 
-            <div className="">
+            <div>
               <EmShape className="em-shape shape"/>
-
-            <div className="rectangle shape"></div>
+              <div className="rectangle shape"/>
             </div>
           </div>
         </section>
