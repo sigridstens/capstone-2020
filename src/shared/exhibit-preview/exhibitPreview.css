@@ -5,7 +5,7 @@
 
 .exhibit-preview {
     text-align: right;
-    padding-bottom: 10em;
+    min-height: 30em;
 }
 
 h4 {
@@ -26,7 +26,7 @@ h4 {
     background-color: var(--yellow);
     color: var(--darkgreen);
     position: absolute;
-    bottom: 1.5em;
+    bottom: 15em;
     right: 4.5em;
 }
 

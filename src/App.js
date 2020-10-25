@@ -4,7 +4,6 @@ import Header from './header/header.js';
 import Footer from './footer/footer.js';
 import Home from './home/home.js';
 import About from './about/about.js';
-import Participate from './participate/participate.js';
 import Explore from './explore/explore.js';
 import {BrowserRouter, Route} from 'react-router-dom';
 import FullCollection from "./full-collection/full-collection";
@@ -12,6 +11,7 @@ import ExhibitGallery from "./exhibit-gallery/exhibit-gallery";
 import Submission from "./submission/submission";
 import ExhibitsOverview from "./exhibits-overview/exhibits-overview";
 import ScrollToTop from "./scroll-to-top/scrollToTop";
+import Participate from "./participate/participate";
 
 function App() {
   return (

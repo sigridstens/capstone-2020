@@ -16,9 +16,21 @@ function Home() {
       setIndex(index => {
         return index === wordCarousel.length - 1 ? 0 : index + 1;
       });
-    }, 1000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
+
+  function scrollDown(){
+    const element = document.getElementsByClassName('description')[0];
+    const headerOffset = 150;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
 
 
   return (
@@ -27,7 +39,7 @@ function Home() {
         <h2>Everyone has <span className="outlined">lost</span> <span className="hidden">experiences.</span>
           <span className="rotating">{wordCarousel[index]}</span>
         </h2>
-        <i className="fas fa-angle-down scroll-button"/></section>
+        <i className="fas fa-angle-down scroll-button" onClick={scrollDown}/></section>
 
         <section className="content-section col-container description">
           <div className="col-text center-container">
@@ -43,7 +55,36 @@ function Home() {
         </section>
 
       <ExhibitPreview exhibit={exhibits[exhibitNames[0]]}/>
-      <CallToParticipate/>
+
+        <section className="content-section col-container call-to-action">
+          <div className="rectangle-shape shape"/>
+          <div className="col-text">
+            <h4>Do you have a lost experience to share?</h4>
+            <p>Everyone has lost experiences.</p>
+          </div>
+
+          <p className="circle-text">Some of them are big and easy to notice.</p>
+        </section>
+
+        <section className=" content-section section-two col-container call-to-action">
+          <div className="col-text">
+            <img className="multiple-circle" src={process.env.PUBLIC_URL + "/multiple-shapes@2x.png"}/>
+          </div>
+
+          <div className="col-text col-two">
+            <p>While some are so small or routine it is difficult to see how much their loss affects us.</p>
+          </div>
+        </section>
+
+        <section className=" content-section col-container call-to-action">
+          <div className="rectangle-shape shape"/>
+          <div className="col-text">
+            <p className="center">We each have a unique perspective of our experiences. There is no “one right way” to be creative and you don't have to be an "artist" to use creativity to help express and process your thoughts and feelings.</p>
+            <p>
+              <Link to="/participate" className="button">participate</Link>
+            </p>
+          </div>
+        </section>
     </main>
   )
 }

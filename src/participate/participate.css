@@ -7,58 +7,6 @@
     position: relative;
 }
 
-.participate .content-section {
-    align-items: center;
-}
-
-.circle-text {
-    transform:translate(2em, 8em);
-    background-color: var(--blue);
-    padding: 9em 4.75em;
-    height: 20em;
-    width: 20em;
-    border-radius: 100%;
-    color: white;
-    font-size: 1.85vw;
-    line-height: 2.2vw;
-}
-
-.participate .hero {
-    height: fit-content;
-    padding: 0 15%;
-}
-
-.participate .multiple-circle {
-    width: 80%;
-    padding: 10% 4%
-10% 16%;
-}
-
-.participate .col-two {
-    align-self: flex-end;
-}
-
-.participate .rectangle-shape {
-    height: 1.5em;
-}
-
-.participate .brown-rectangle {
-    bottom: auto;
-    top: 0;
-    right: auto;
-    left: 0;
-    height: 3em;
-}
-
-.participate .red-rectangle {
-    left: auto;
-    right: 0;
-    width: 50vw;
-    height: 2em;
-    top: unset;
-    bottom: 0;
-}
-
 .participate .yellow-triangle-shape {
     top: 0;
 }

@@ -20,7 +20,7 @@
 }
 .hero .rotating {
     position: absolute;
-    transform: translatex(-6.35em);
+    transform: translatex(-25vw);
     color: var(--yellow);
 }
 
@@ -51,8 +51,69 @@
     margin: auto 0;
 }
 
-.home .call-to-participate {
-    margin-top: 10em;
+.call-to-action:nth-child(4), .call-to-action:nth-of-type(5) {
+    padding-top: 0;
+}
+
+.call-to-action {
+    align-items: center;
+}
+
+.circle-text {
+    transform:translate(2em, 8em);
+    background-color: var(--blue);
+    padding: 9em 4.75em;
+    height: 20em;
+    width: 20em;
+    border-radius: 100%;
+    color: white;
+    font-size: 1.85vw;
+    line-height: 2.2vw;
+    margin: 0;
+}
+
+.call-to-action .hero {
+    height: fit-content;
+    padding: 0 15%;
+}
+
+.call-to-action .multiple-circle {
+    width: 80%;
+    padding: 10% 4%
+    10% 16%;
+}
+
+.call-to-action .col-two {
+    align-self: flex-end;
+}
+
+.call-to-action .rectangle-shape {
+    height: 1.5em;
+}
+
+.call-to-action .brown-rectangle {
+    bottom: auto;
+    top: 0;
+    right: auto;
+    left: 0;
+    height: 3em;
+}
+
+.call-to-action .red-rectangle {
+    left: auto;
+    right: 0;
+    width: 50vw;
+    height: 2em;
+    top: unset;
+    bottom: 0;
+}
+
+.home .rectangle-shape {
+    top: 0;
+}
+
+.call-to-action:nth-child(6) .button {
+    margin: 2em 0;
 }
 
 /*Tablet Sized Screens*/
@@ -65,8 +126,9 @@
         font-size: 1.2rem;
     }
 
-    .home .col-text {
-
+    .hero .rotating {
+        text-align: center;
+        transform: translateX(-6.35em);
     }
 }
 
@@ -92,7 +154,12 @@
 
     .hero .rotating {
         text-align: center;
-        left: 70vw;
+        transform: translateX(0);
+        position: relative;
+    }
+
+    .hero .hidden {
+        display: none;
     }
 
     .home .rectangle {
@@ -103,12 +170,6 @@
 @media screen and (max-width: 480px) {
     .home .rectangle {
        visibility: hidden;
-    }
-
-    .hero .rotating {
-        text-align: center;
-        left: unset;
-        right: -20;
     }
 
     .hero h2 {

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './participate.css';
 import EmShape from "../shared/em-shape/emShape";
 import {Link} from 'react-router-dom';
@@ -12,6 +12,11 @@ function Participate() {
     sanitizedName: undefined
   });
   const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    if (window.location.href.indexOf('#submission-form') > -1) {
+      document.getElementById("submission-form").scrollIntoView();
+    }
+  }, [])
 
   // On file select (from the pop up)
   const onFileChange = event => {
@@ -57,7 +62,7 @@ function Participate() {
       return (
         <div>
           <h2>Image Uploaded</h2>
-          <img src={`https://photo-test-kjg01.s3.amazonaws.com/${state.sanitizedName}`} style={{ height: '140px', width: '140px'}}/>
+          <img src={`https://testsubmissions.s3.amazonaws.com/${state.sanitizedName}`} style={{ height: '140px', width: '140px'}}/>
         </div>
       );
     } else if (loading) {
@@ -80,50 +85,14 @@ function Participate() {
   return(
     <main className="participate">
       <div className="modalOverlay"/>
-      <section className="hero content-section col-container">
-        <div className="col-text">
-          <h4>Do you have a lost experience to share?</h4>
-          <p>Everyone has lost experiences.</p>
-        </div>
-
-        <div className="relative circle-container">
-          <p className="circle-text">Some of them are big and easy to notice.</p>
-        </div>
-      </section>
-
-      <section className=" content-section section-two col-container">
-        <div className="col-text">
-          <img className="multiple-circle" src={process.env.PUBLIC_URL + "/multiple-shapes@2x.png"}/>
-        </div>
-
-        <div className="col-text col-two">
-          <p>While some are so small or routine it is difficult to see how much their loss affects us.</p>
-        </div>
-      </section>
-
-      <section className=" content-section col-container center-container">
-        <div className="rectangle-shape shape"/>
-        <div className="col-text">
-          <p className="center">We each have a unique perspective of our experiences. There is no “one right way” to be creative.</p>
-        </div>
-      </section>
-
-      <section className=" content-section col-container">
-        <div className="col-text">
-          <div className="brown-rectangle"/>
-          <p>TheMoLE encourages people to use creativity to help process their feelings about missed opportunities—even if they don’t identify as an “artist.”</p>
-        </div>
-        <div className="red-rectangle"/>
-      </section>
-
-      <section className=" content-section col-container participation-details">
+      <section className=" content-section col-container participation-details" id="submission-form">
         <div className="yellow-triangle-shape shape"/>
 
         <div className="col-text">
           <h4>How to participate</h4>
           <p>To participate, make a creative representation of a lost experience in your life,  like a shift in your routine after some life change, a lost job, lost opportunity, lost moment, or lost relationship.</p>
 
-          <p>For more examples, check out the <Link to="/explore">collection</Link> to see what others have submitted.</p>
+          <p>For more examples, check out the <Link to="/full-collection">collection</Link> to see what others have submitted.</p>
         </div>
       </section>
 
