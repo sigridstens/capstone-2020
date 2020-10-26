@@ -130,6 +130,39 @@
         text-align: center;
         transform: translateX(-6.35em);
     }
+
+    .call-to-action {
+        padding-top: 10em;
+    }
+
+    .call-to-action .hero {
+        flex-direction: column;
+    }
+
+    .circle-text {
+        transform: translate(0, 0);
+        background-color: var(--blue);
+        padding: 9em 4.75em;
+        height: 50vw;
+        width: 50vw;
+        border-radius: 100%;
+        color: white;
+        font-size: 2.5vw;
+        line-height: 3.0vw;
+    }
+
+    .call-to-action .participation-details {
+        padding-top: 8em;
+        font-size: .9em;
+    }
+
+    .call-to-action .col-container.participation-details .col-text {
+        width: 50vw;
+    }
+
+    .call-to-action .col-container.participation-details {
+        align-items: flex-end;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -165,6 +198,34 @@
     .home .rectangle {
         left: 100vw;
     }
+
+    .call-to-action:nth-child(4) {
+        padding-top: 5em;
+    }
+
+    .call-to-action .col-container.participation-details {
+        justify-content: flex-end;
+    }
+
+    .call-to-action .col-text {
+        width: 70vw;
+    }
+
+    .call-to-action h4 {
+        width: 70vw;
+    }
+
+    .circle-text {
+        transform:translate(0, 0);
+        background-color: var(--blue);
+        padding: 8.5em 3.9em;
+        height: 65vw;
+        width: 65vw;
+        border-radius: 100%;
+        color: white;
+        font-size: 3.5vw;
+        line-height: 4.5vw;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -177,5 +238,34 @@
         font-size: 8vw;
         text-align: right;
         max-width: 75vw;
+    }
+
+    .call-to-action .content-section:nth-of-type(5) {
+        padding: 1em 15%;
+    }
+
+    .call-to-action .col-container.participation-details .col-text {
+        width: 70vw;
+    }
+
+    .call-to-action .col-text p {
+        font-size: .75em;
+        line-height: 1.5em;
+    }
+
+    .call-to-action .col-text {
+        width: 70vw;
+    }
+
+    .circle-text {
+        transform:translate(0, 0);
+        background-color: var(--blue);
+        padding: 9em 4.75em;
+        height: 80vw;
+        width: 80vw;
+        border-radius: 100%;
+        color: white;
+        font-size: 4vw;
+        line-height: 5vw;
     }
 }

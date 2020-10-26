@@ -4,7 +4,6 @@ import EmShape from "../shared/em-shape/emShape";
 import {Link} from 'react-router-dom';
 import axios from "axios";
 
-
 function Participate() {
   const [state, setState] = useState({
     fileData: null,
@@ -80,66 +79,72 @@ function Participate() {
   const openConfirmationModal = () => {
     document.getElementsByClassName("modalOverlay")[0].classList.toggle("openModal");
     document.getElementsByClassName("confirmationModal")[0].classList.toggle("openModal");
-  }
+    onFileUpload();
+  };
 
   return(
     <main className="participate">
-      <div className="modalOverlay"/>
       <section className=" content-section col-container participation-details" id="submission-form">
-        <div className="yellow-triangle-shape shape"/>
+        <EmShape className="em-shape shape"/>
+        <div className="rectangle shape"/>
 
         <div className="col-text">
           <h4>How to participate</h4>
-          <p>To participate, make a creative representation of a lost experience in your life,  like a shift in your routine after some life change, a lost job, lost opportunity, lost moment, or lost relationship.</p>
+          <p>Make a creative representation of a lost experience in your life, like a shift in your routine after some life change, lost opportunity, lost moment, etc.</p>
 
-          <p>For more examples, check out the <Link to="/full-collection">collection</Link> to see what others have submitted.</p>
+          <p>For examples, check out the <Link to="/full-collection">collection</Link>.</p>
         </div>
       </section>
 
-      <section className=" content-section col-container">
-        <div className="col-text submission-form">
-          <EmShape/>
+      <section className="content-section col-container submission-form">
+        <div className="col-text">
+          <div className="yellow-triangle-shape shape"/>
+
           <p>When your lost experience is ready, take a photo or video of it and submit it here!</p>
 
           <form>
             <div className="form-row file-upload-section">
-              <label htmlFor="submission-file">Submission Image or Video:</label>
+              <label htmlFor="submission-file">Submission Image:</label>
               <input type="file" onChange={onFileChange} className="file-input"/>
             </div>
             <div className="form-row">
               <label htmlFor="title">Submission Title:</label>
-              <input type="text" id="title" name="title" placeholder="What is your submission title?" />
+              <input type="text" id="title" name="title" placeholder="What is the title of your experience?" />
             </div>
 
             <div className="form-row">
-              <label htmlFor="medium">Medium:</label>
+              <label htmlFor="medium">Materials or technologies used:</label>
               <select id="medium" name="medium">
-                <option value="drawing">drawing</option>
-                <option value="painting">painting</option>
                 <option value="collage">collage</option>
                 <option value="digital">digital art</option>
-                <option value="sculpture">sculpture</option>
+                <option value="drawing">drawing</option>
                 <option value="textile">fabric, yarn, thread, or textile</option>
-                <option value="music">music or sound</option>
-                <option value="photography">photography</option>
-                <option value="technology">technology</option>
                 <option value="technology">food</option>
+                <option value="music">music or sound</option>
+                <option value="painting">painting</option>
+                <option value="photography">photography</option>
+                <option value="sculpture">sculpture</option>
+                <option value="technology">technology</option>
                 <option value="other">other</option>
               </select>
             </div>
 
             <div className="form-row">
-              <label htmlFor="description">Short Submission Description (optional):</label>
+              <label htmlFor="description">Brief Submission Description:</label>
               <textarea type="text" id="description" name="description" />
             </div>
 
             <div className="form-row">
               <label htmlFor="name">Your name (optional):</label>
-              <input type="text" id="name" name="name" placeholder="What's your name (if you'd like to include it)?" />
+              <input type="text" id="name" name="name" placeholder="What's your name?" />
             </div>
 
             <div className="form-row">
-              <label htmlFor="age">Your Age:</label>
+              <div className="tooltip-container">
+                <label htmlFor="age">Your Age:</label>
+                <p className="tooltip-text">This info will be used so viewers can sort submissions by the creator's age.</p>
+              </div>
+
               <select id="age" name="age">
                 <option value="under 20">under 20</option>
                 <option value="21-30">21-30</option>

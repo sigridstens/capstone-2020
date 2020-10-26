@@ -18,7 +18,8 @@ function App() {
       <BrowserRouter>
         <ScrollToTop>
           <div className="App">
-              <Header />
+            <div className="modalOverlay"/>
+            <Header />
               <Route exact path="/" component={Home} />
               <Route exact path="/about" component={About} />
               <Route exact path="/participate" component={Participate} />
