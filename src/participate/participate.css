@@ -42,7 +42,7 @@
 }
 
 .yellow-triangle-shape {
-
+    z-index: -1;
 }
 
 select {
@@ -140,7 +140,7 @@ button, input[type="submit"], input[type="reset"] {
     background-color: white;
     padding: 2em 3em;
     width: 30em;
-    position: absolute;
+    position: fixed;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -172,10 +172,6 @@ button, input[type="submit"], input[type="reset"] {
     .participate .description {
         font-size: 1.2rem;
     }
-
-    .confirmationModal {
-        top: 50%;
-    }
 }
 
 /*Tablet screen sizes*/
@@ -201,23 +197,27 @@ button, input[type="submit"], input[type="reset"] {
     }
 
     .confirmationModal {
-        font-size: .85em;
-        line-height: 1em;
-        top: 60%;
         left: 50%;
+        top: 54%;
         transform: translate(-50%, -50%);
         width: 90%;
     }
 
-    .openModal {
-        display: block;
+    .confirmationModal p {
+        font-size: .8em;
+        line-height: 1.4em;
     }
 
-    .participate .close-icon {
-        position: absolute;
-        top: -1em;
-        right: -1em;
-        color: var(--darkgreen);
+    .confirmationModal h3 {
+        font-size: .9em;
+    }
+
+    .confirmationModal h4 {
+        font-size: 1em;
+    }
+
+    .new-submission-link {
+        text-align: center;
     }
 }
 
@@ -239,7 +239,15 @@ button, input[type="submit"], input[type="reset"] {
         display: none;
     }
 
+    .participation-details .col-text {
+        width: 100%;
+    }
+
     .submission-form {
         width: 100%;
+    }
+
+    .confirmationModal {
+        padding: 3em 2em;
     }
 }

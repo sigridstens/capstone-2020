@@ -46,7 +46,7 @@ h4 {
         top: 10.5em;
     }
 
-    h4 {
+    .exhibit-preview h4 {
         width: 50vw;
         align-self: flex-end;
     }
@@ -59,7 +59,7 @@ h4 {
         padding-bottom: 5rem;
     }
 
-    h4 {
+    .exhibit-preview h4 {
         align-self: flex-end;
     }
 

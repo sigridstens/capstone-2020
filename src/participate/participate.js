@@ -168,9 +168,9 @@ function Participate() {
               <i className="fas fa-times close-icon" onClick={openConfirmationModal}/>
               <h3>Submission received!</h3>
               <h4>Thanks for adding your lost experience to the museum!</h4>
-              <Link to="#">You can find your submission here.</Link>
+              <p><Link to="#" className="new-submission-link">You can find your submission here.</Link></p>
               <p>If you have time, check out others' submissions in the <Link to="/full-collection">collection</Link> or
-                connect with others by sharing your submission on social media by tagging it #WeAllHaveLostExperiences.
+                connect with others by sharing your submission on social media by using the hashtag <em>#MyLostExperience</em>.
               </p>
             </div>
           </aside>
