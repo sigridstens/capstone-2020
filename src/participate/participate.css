@@ -41,6 +41,10 @@
     color: var(--darkgreen);
 }
 
+.yellow-triangle-shape {
+
+}
+
 select {
     margin: .5em 0;
     padding: .25em;
@@ -168,6 +172,10 @@ button, input[type="submit"], input[type="reset"] {
     .participate .description {
         font-size: 1.2rem;
     }
+
+    .confirmationModal {
+        top: 50%;
+    }
 }
 
 /*Tablet screen sizes*/
@@ -190,6 +198,26 @@ button, input[type="submit"], input[type="reset"] {
 
     .submission-form .col-text {
         width: 100%;
+    }
+
+    .confirmationModal {
+        font-size: .85em;
+        line-height: 1em;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+    .openModal {
+        display: block;
+    }
+
+    .participate .close-icon {
+        position: absolute;
+        top: -1em;
+        right: -1em;
+        color: var(--darkgreen);
     }
 }
 

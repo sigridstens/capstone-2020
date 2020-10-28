@@ -20,14 +20,14 @@ function Participate() {
   // On file select (from the pop up)
   const onFileChange = event => {
     const newName = event.target.files[0].name;
-    const fileDataURL = file => new Promise((resolve,reject) => {
+    const fileDataURL = file => new Promise((resolve, reject) => {
       let fr = new FileReader();
-      fr.onload = () => resolve( fr.result);
+      fr.onload = () => resolve(fr.result);
       fr.onerror = reject;
-      fr.readAsDataURL( file)
+      fr.readAsDataURL(file)
     });
-    fileDataURL( event.target.files[0])
-      .then( data => {
+    fileDataURL(event.target.files[0])
+      .then(data => {
         setState({fileData: data, name: newName})
       });
   };
@@ -38,10 +38,10 @@ function Participate() {
     let fileType = 'jpeg';
     const sanitizedName = nameParts[0].replace(/[^a-zA-Z0-9]/g, '');
 
-    const response = await axios.get(`https://1kvi0gug9i.execute-api.us-east-1.amazonaws.com/beta/files?fileName=${sanitizedName}&fileType=${nameParts[1]}`);
+    const response = await axios.get(`https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files?fileName=${sanitizedName}&fileType=${nameParts[1]}`);
     const binary = atob(state.fileData.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));
     const arr = [];
-    for ( let i = 0; i < binary.length; i++) {
+    for (let i = 0; i < binary.length; i++) {
       arr.push(binary.charCodeAt(i));
     }
     if (nameParts[1] === 'png') {
@@ -61,13 +61,14 @@ function Participate() {
       return (
         <div>
           <h2>Image Uploaded</h2>
-          <img src={`https://testsubmissions.s3.amazonaws.com/${state.sanitizedName}`} style={{ height: '140px', width: '140px'}}/>
+          <img src={`https://testsubmissions.s3.amazonaws.com/${state.sanitizedName}`}
+               style={{height: '140px', width: '140px'}}/>
         </div>
       );
     } else if (loading) {
       return (
         <div>
-          <br />
+          <br/>
           <h4>loading</h4>
         </div>
       );
@@ -82,7 +83,7 @@ function Participate() {
     onFileUpload();
   };
 
-  return(
+  return (
     <main className="participate">
       <section className=" content-section col-container participation-details" id="submission-form">
         <EmShape className="em-shape shape"/>
@@ -90,7 +91,8 @@ function Participate() {
 
         <div className="col-text">
           <h4>How to participate</h4>
-          <p>Make a creative representation of a lost experience in your life, like a shift in your routine after some life change, lost opportunity, lost moment, etc.</p>
+          <p>Make a creative representation of a lost experience in your life, like a shift in your routine after some
+            life change, lost opportunity, lost moment, etc.</p>
 
           <p>For examples, check out the <Link to="/full-collection">collection</Link>.</p>
         </div>
@@ -109,7 +111,7 @@ function Participate() {
             </div>
             <div className="form-row">
               <label htmlFor="title">Submission Title:</label>
-              <input type="text" id="title" name="title" placeholder="What is the title of your experience?" />
+              <input type="text" id="title" name="title" placeholder="What is the title of your experience?"/>
             </div>
 
             <div className="form-row">
@@ -131,18 +133,19 @@ function Participate() {
 
             <div className="form-row">
               <label htmlFor="description">Brief Submission Description:</label>
-              <textarea type="text" id="description" name="description" />
+              <textarea type="text" id="description" name="description"/>
             </div>
 
             <div className="form-row">
               <label htmlFor="name">Your name (optional):</label>
-              <input type="text" id="name" name="name" placeholder="What's your name?" />
+              <input type="text" id="name" name="name" placeholder="What's your name?"/>
             </div>
 
             <div className="form-row">
               <div className="tooltip-container">
                 <label htmlFor="age">Your Age:</label>
-                <p className="tooltip-text">This info will be used so viewers can sort submissions by the creator's age.</p>
+                <p className="tooltip-text">This info will be used so viewers can sort submissions by the creator's
+                  age.</p>
               </div>
 
               <select id="age" name="age">
@@ -162,11 +165,13 @@ function Participate() {
 
           <aside className="confirmationModal">
             <div className="relative">
-            <i className="fas fa-times close-icon" onClick={openConfirmationModal}/>
-            <h3>Submission received!</h3>
-            <h4>Thanks for adding your lost experience to the museum!</h4>
-            <Link to="#">You can find your submission here.</Link>
-            <p>If you have time, check out others' submissions in the <Link to="/full-collection">collection</Link> or connect with others by sharing your submission on social media by tagging it #WeAllHaveLostExperiences.</p>
+              <i className="fas fa-times close-icon" onClick={openConfirmationModal}/>
+              <h3>Submission received!</h3>
+              <h4>Thanks for adding your lost experience to the museum!</h4>
+              <Link to="#">You can find your submission here.</Link>
+              <p>If you have time, check out others' submissions in the <Link to="/full-collection">collection</Link> or
+                connect with others by sharing your submission on social media by tagging it #WeAllHaveLostExperiences.
+              </p>
             </div>
           </aside>
         </div>
