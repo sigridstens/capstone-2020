@@ -140,11 +140,10 @@
     }
 
     .circle-text {
-        transform: translate(0, 0);
         background-color: var(--blue);
-        padding: 9em 4.75em;
-        height: 50vw;
-        width: 50vw;
+        padding: 7em 4.75em;
+        height: 42vw;
+        flex-basis: 80%;
         border-radius: 100%;
         color: white;
         font-size: 2.5vw;
@@ -235,7 +234,7 @@
 
     .hero h2 {
         margin: auto;
-        font-size: 8vw;
+        font-size: 7.5vw;
         text-align: right;
         max-width: 75vw;
     }

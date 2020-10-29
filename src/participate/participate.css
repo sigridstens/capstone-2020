@@ -107,7 +107,7 @@ textarea {
 
 label {
     font-weight: bold;
-    color: var(--red);
+    font-size: .9em;
 }
 
 button, input[type="submit"], input[type="reset"] {
@@ -157,6 +157,10 @@ button, input[type="submit"], input[type="reset"] {
     top: -1em;
     right: -1em;
     color: var(--darkgreen);
+}
+
+.participate .col-container:nth-of-type(2) .col-text {
+    margin: auto;
 }
 
 /*Small Screen Sizes*/

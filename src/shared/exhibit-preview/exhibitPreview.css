@@ -39,7 +39,6 @@ h4 {
     .exhibit-preview {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
     }
 
     .hang-off-screen {
@@ -68,7 +67,6 @@ h4 {
         display: flex;
         flex-direction: column;
         right: unset;
-        margin: auto;
         align-items: center;
         top: unset;
     }

@@ -49,8 +49,18 @@ function Participate() {
     }
     const blobData = new Blob([new Uint8Array(arr)], {type: `image/${fileType}`});
     setLoading(true);
+    const imageName = sanitizedName + '.' + nameParts[1];
+    await axios.post('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files',
+      {
+        "title": 'sigspot',
+        "material": "cheese",
+        "imageName": imageName,
+        "description": "What a nice day for a ride to the park. It was snowing. ",
+        "name": "Kevin",
+        "age": "under 20"
+      });
     await axios.put(response.data.uploadURL, blobData).then(() => {
-      setState({...state, sanitizedName: sanitizedName + '.' + nameParts[1]});
+      setState({...state, sanitizedName: imageName});
     }).finally(() => {
       setLoading(false);
     });
@@ -85,7 +95,7 @@ function Participate() {
 
   return (
     <main className="participate">
-      <section className=" content-section col-container participation-details" id="submission-form">
+      <section className=" content-section col-container participation-details">
         <EmShape className="em-shape shape"/>
         <div className="rectangle shape"/>
 
@@ -98,21 +108,43 @@ function Participate() {
         </div>
       </section>
 
+      <section className=" content-section col-container center">
+        <div className="col-text">
+          <p>You can use text, a link to a project, and any medium you can photograph to express your lost experience. We hope to have video and audio submission capabilities available soon!</p>
+        </div>
+      </section>
+
       <section className="content-section col-container submission-form">
         <div className="col-text">
           <div className="yellow-triangle-shape shape"/>
 
-          <p>When your lost experience is ready, take a photo or video of it and submit it here!</p>
+          <p>When your lost experience is ready, add it to the collection here!</p>
 
-          <form>
-            <div className="form-row file-upload-section">
-              <label htmlFor="submission-file">Submission Image:</label>
-              <input type="file" onChange={onFileChange} className="file-input"/>
-            </div>
+          <form method="post">
+            <h6>Submission</h6>
+
             <div className="form-row">
               <label htmlFor="title">Submission Title:</label>
               <input type="text" id="title" name="title" placeholder="What is the title of your experience?"/>
             </div>
+
+            <h5>Add one or more types of media (image, link, text) as your submission:</h5>
+            <div className="form-row file-upload-section">
+              <label htmlFor="submission-file">Image Submission:</label>
+              <input type="file" onChange={onFileChange} className="file-input"/>
+            </div>
+
+            <div className="form-row">
+              <label htmlFor="submission-text">Written Submission:</label>
+              <textarea type="text" id="submission-text" name="submission-text"/>
+            </div>
+
+            <div className="form-row">
+              <label htmlFor="submission-link">Link to Submission (must also include a thumbnail image above):</label>
+              <input type="text" id="submission-link" name="submission-link"/>
+            </div>
+
+            <h6>Submission Medium & Description</h6>
 
             <div className="form-row">
               <label htmlFor="medium">Materials or technologies used:</label>
@@ -121,8 +153,8 @@ function Participate() {
                 <option value="digital">digital art</option>
                 <option value="drawing">drawing</option>
                 <option value="textile">fabric, yarn, thread, or textile</option>
-                <option value="technology">food</option>
-                <option value="music">music or sound</option>
+                <option value="food">food</option>
+                {/*<option value="music">music or sound</option>*/}
                 <option value="painting">painting</option>
                 <option value="photography">photography</option>
                 <option value="sculpture">sculpture</option>
@@ -136,9 +168,16 @@ function Participate() {
               <textarea type="text" id="description" name="description"/>
             </div>
 
+            <h6>Artist Background</h6>
+
             <div className="form-row">
               <label htmlFor="name">Your name (optional):</label>
               <input type="text" id="name" name="name" placeholder="What's your name?"/>
+            </div>
+
+            <div className="form-row">
+              <label htmlFor="city">Your city (optional):</label>
+              <input type="text" id="city" name="city" placeholder="Where do you live?"/>
             </div>
 
             <div className="form-row">
