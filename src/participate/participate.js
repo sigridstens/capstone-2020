@@ -121,7 +121,7 @@ function Participate() {
           <p>When your lost experience is ready, add it to the collection here!</p>
 
           <form method="post">
-            <h6>Submission</h6>
+            <h6>Submission Content</h6>
 
             <div className="form-row">
               <label htmlFor="title">Submission Title:</label>
@@ -144,7 +144,7 @@ function Participate() {
               <input type="text" id="submission-link" name="submission-link"/>
             </div>
 
-            <h6>Submission Medium & Description</h6>
+            <h6>Medium & Description</h6>
 
             <div className="form-row">
               <label htmlFor="medium">Materials or technologies used:</label>

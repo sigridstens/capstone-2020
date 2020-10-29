@@ -23,6 +23,12 @@
     padding-top: 7em;
 }
 
+.submission-form .col-text {
+    justify-content: flex-end;
+    padding-top: 7em;
+    width: 30em;
+}
+
 .align-right {
     justify-content: flex-end;
 }
@@ -41,8 +47,9 @@
     color: var(--darkgreen);
 }
 
-.yellow-triangle-shape {
+.participate .yellow-triangle-shape {
     z-index: -1;
+    right: 60vw;
 }
 
 select {
