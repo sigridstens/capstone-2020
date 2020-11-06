@@ -123,6 +123,11 @@ button, input[type="submit"], input[type="reset"] {
     cursor: pointer;
 }
 
+.button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
 .file-input {
     width: fit-content;
 }

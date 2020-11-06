@@ -1,6 +1,7 @@
 .full-collection {
     padding-top: 15em ;
     position: relative;
+    min-height: 42em;
 }
 
 .full-collection .content-section {

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './home.css';
 import ExhibitPreview from "../shared/exhibit-preview/exhibitPreview";
-import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import {Link} from 'react-router-dom';
 import EmShape from "../shared/em-shape/emShape";
 import {exhibits,exhibitNames} from "../exhibits-overview/exhibits-overview";

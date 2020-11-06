@@ -1,11 +1,20 @@
 import React, {useEffect, useState} from "react";
 import './header.css';
 import {Link, withRouter} from 'react-router-dom';
-import {submissions} from "../full-collection/full-collection";
+import axios from "axios";
 
 
 const Navigation = (props) => {
     const [route, setRoute] = useState('');
+
+    const [submissionData, setSubmissionData] = useState([]);
+    useEffect(() => {
+        async function fetchData() {
+            const response = await axios.get('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/data');
+            setSubmissionData(response.data.Items);
+        }
+        fetchData();
+    }, []);
 
     useEffect(() => {
         setRoute(props.location.pathname);
@@ -18,9 +27,14 @@ const Navigation = (props) => {
     }
 
     let getRandomURL = () => {
-        let randomSubmission = Math.floor((Math.random() * submissions.length));
-        let randomURL = submissions[randomSubmission].linkpath;
-        return randomURL;
+        if (submissionData.length > 0) {
+            let randomSubmission = Math.floor((Math.random() * submissionData.length));
+            console.log(submissionData[randomSubmission]);
+            let randomURL = submissionData[randomSubmission].linkpath;
+            return randomURL;
+        } else {
+            return "";
+        }
     }
 
 
@@ -45,9 +59,9 @@ const Navigation = (props) => {
                                     <Link to="/full-collection">Full Collection</Link>
                                 </li>
 
-                                <li className="sub-nav-item" onClick={toggleNav}>
+                                {/*<li className="sub-nav-item" onClick={toggleNav}>
                                     <Link to="/current-exhibits">Exhibits</Link>
-                                </li>
+                                </li>*/}
 
                                 <li className="sub-nav-item" onClick={toggleNav}>
                                     <Link to={getRandomURL()}>Random Submission</Link>

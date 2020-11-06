@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './full-collection.css';
 import Circle from "../shared/circle/circle";
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import SubmissionFiltering from "../shared/submission-filtering/submission-filtering";
+import axios from "axios";
 
-export const submissions = [
+{/*export const submissions = [
   {
     image: "/collage-submission.jpg",
     exhibitName: "Lost Quarantine Experiences",
@@ -232,9 +233,18 @@ export const submissions = [
     exhibitLink: "/exhibit/summer-vacation"
 
   },
-];
+];*/}
 
 function FullCollection() {
+  const [submissionData, setSubmissionData] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/data');
+      setSubmissionData(response.data.Items);
+    }
+    fetchData();
+    }, []);
+
   return (
     <main>
       <section className= "full-collection">
@@ -244,23 +254,13 @@ function FullCollection() {
           <h4>Lost Experiences</h4>
 
           <SubmissionFiltering/>
-          {/*<nav className="filtering">
-            <h5>filter exhibit</h5>
-            <i className="fas fa-search search-icon"/>
-            <ul>
-              <li>medium</li>
-              <li>submitter age</li>
-              <li>tags</li>
-              <li>sort by</li>
-            </ul>
-          </nav>*/}
         </div>
 
         <section className="submission-gallery">
           {
-            submissions.map((submission, index) => {
+            submissionData.map((submission, index) => {
               return (
-                <Circle key={index} backgroundImage={submission.image} title={submission.title} linkurl = {submission.linkpath}/>
+                <Circle key={index} backgroundImage={"https://testsubmissions.s3.us-east-2.amazonaws.com/" + submission.imageName} title={submission.title} linkurl = {submission.linkpath}/>
               )
             })
           }

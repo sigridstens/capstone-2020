@@ -10,7 +10,8 @@
     margin: 0 1em;
 }
 
-.submission h4 {
+.submission h5 {
+    color: black;
 }
 
 .submission p {

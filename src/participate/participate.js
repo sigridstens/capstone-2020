@@ -2,15 +2,42 @@ import React, {useEffect, useState} from 'react';
 import './participate.css';
 import EmShape from "../shared/em-shape/emShape";
 import {Link} from 'react-router-dom';
-import axios from "axios";
+import {onFileUpload} from "./utility";
 
 function Participate() {
-  const [state, setState] = useState({
-    fileData: null,
-    name: undefined,
-    sanitizedName: undefined
-  });
   const [loading, setLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    title: "",
+    image: undefined,
+    submissionText: "",
+    submissionLink: "",
+    medium: "",
+    description: "",
+    artistName: "",
+    artistCity: "",
+    artistState: "",
+    artistAge: "",
+    exhibitName: "Lost Quarantine Experiences",
+    exhibitLink: "/exhibit/lost-quarantine-experiences"
+  });
+
+  const disableSubmit = () => {
+    if (!formData.title || !formData.medium || !formData.description || !formData.artistAge) {
+      return true;
+    }
+
+    if (!formData.image && !formData.submissionText && (!formData.submissionLink || !formData.image)) {
+      return true
+    }
+  }
+
+  const handleChange = (fieldName, event) => {
+    const tempData = {...formData};
+    tempData[fieldName] = event.target.value;
+    setFormData(tempData);
+  }
+
   useEffect(() => {
     if (window.location.href.indexOf('#submission-form') > -1) {
       document.getElementById("submission-form").scrollIntoView();
@@ -28,51 +55,15 @@ function Participate() {
     });
     fileDataURL(event.target.files[0])
       .then(data => {
-        setState({fileData: data, name: newName})
+        setFormData({...formData, image: {fileData: data, name: newName}});
       });
   };
 
-  // On file upload (click the upload button)
-  const onFileUpload = async () => {
-    const nameParts = state.name.split('.');
-    let fileType = 'jpeg';
-    const sanitizedName = nameParts[0].replace(/[^a-zA-Z0-9]/g, '');
-
-    const response = await axios.get(`https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files?fileName=${sanitizedName}&fileType=${nameParts[1]}`);
-    const binary = atob(state.fileData.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));
-    const arr = [];
-    for (let i = 0; i < binary.length; i++) {
-      arr.push(binary.charCodeAt(i));
-    }
-    if (nameParts[1] === 'png') {
-      fileType = 'png';
-    }
-    const blobData = new Blob([new Uint8Array(arr)], {type: `image/${fileType}`});
-    setLoading(true);
-    const imageName = sanitizedName + '.' + nameParts[1];
-    await axios.post('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files',
-      {
-        "title": 'sigspot',
-        "material": "cheese",
-        "imageName": imageName,
-        "description": "What a nice day for a ride to the park. It was snowing. ",
-        "name": "Kevin",
-        "age": "under 20"
-      });
-    await axios.put(response.data.uploadURL, blobData).then(() => {
-      setState({...state, sanitizedName: imageName});
-    }).finally(() => {
-      setLoading(false);
-    });
-  };
-
-  const fileData = () => {
-    if (state.sanitizedName && !loading) {
+  const displayImgLoading = () => {
+    if (!loading) {
       return (
         <div>
           <h2>Image Uploaded</h2>
-          <img src={`https://testsubmissions.s3.amazonaws.com/${state.sanitizedName}`}
-               style={{height: '140px', width: '140px'}}/>
         </div>
       );
     } else if (loading) {
@@ -87,10 +78,14 @@ function Participate() {
     }
   };
 
-  const openConfirmationModal = () => {
+  const openConfirmationModal = async () => {
     document.getElementsByClassName("modalOverlay")[0].classList.toggle("openModal");
     document.getElementsByClassName("confirmationModal")[0].classList.toggle("openModal");
-    onFileUpload();
+    setLoading(true);
+    await onFileUpload(formData).then(() => {
+    }).finally(() => {
+      setLoading(false);
+    });
   };
 
   return (
@@ -125,10 +120,10 @@ function Participate() {
 
             <div className="form-row">
               <label htmlFor="title">Submission Title:</label>
-              <input type="text" id="title" name="title" placeholder="What is the title of your experience?"/>
+              <input type="text" id="title" name="title" value={formData.title} onChange={(event) => handleChange("title", event)} placeholder="What is the title of your experience?"/>
             </div>
 
-            <h5>Add one or more types of media (image, link, text) as your submission:</h5>
+            <h5>Add at least one type of media (image, written, link) as your submission:</h5>
             <div className="form-row file-upload-section">
               <label htmlFor="submission-file">Image Submission:</label>
               <input type="file" onChange={onFileChange} className="file-input"/>
@@ -136,19 +131,20 @@ function Participate() {
 
             <div className="form-row">
               <label htmlFor="submission-text">Written Submission:</label>
-              <textarea type="text" id="submission-text" name="submission-text"/>
+              <textarea type="text" id="submission-text" name="submission-text" value={formData.submissionText} onChange={(event) => handleChange("submissionText", event)}/>
             </div>
 
             <div className="form-row">
               <label htmlFor="submission-link">Link to Submission (must also include a thumbnail image above):</label>
-              <input type="text" id="submission-link" name="submission-link"/>
+              <input type="text" id="submission-link" name="submission-link" value={formData.submissionLink} onChange={(event) => handleChange("submissionLink", event)}/>
             </div>
 
             <h6>Medium & Description</h6>
 
             <div className="form-row">
               <label htmlFor="medium">Materials or technologies used:</label>
-              <select id="medium" name="medium">
+              <select id="medium" name="medium" value={formData.medium} onChange={(event) => handleChange("medium", event)}>
+                <option value=""></option>
                 <option value="collage">collage</option>
                 <option value="digital">digital art</option>
                 <option value="drawing">drawing</option>
@@ -165,19 +161,75 @@ function Participate() {
 
             <div className="form-row">
               <label htmlFor="description">Brief Submission Description:</label>
-              <textarea type="text" id="description" name="description"/>
+              <textarea type="text" id="description" name="description" value={formData.description} onChange={(event) => handleChange("description", event)}/>
             </div>
 
             <h6>Artist Background</h6>
 
             <div className="form-row">
               <label htmlFor="name">Your name (optional):</label>
-              <input type="text" id="name" name="name" placeholder="What's your name?"/>
+              <input type="text" id="name" name="name" placeholder="What's your name?" value={formData.artistName} onChange={(event) => handleChange("artistName", event)}/>
             </div>
 
             <div className="form-row">
               <label htmlFor="city">Your city (optional):</label>
-              <input type="text" id="city" name="city" placeholder="Where do you live?"/>
+              <input type="text" id="city" name="city" placeholder="Where do you live?" value={formData.artistCity} onChange={(event) => handleChange("artistCity", event)}/>
+
+              <label htmlFor="state">State (optional):</label>
+              <select id="state" name="state" value={formData.artistState} onChange={(event) => handleChange("artistState", event)}>
+                <option value=""></option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
             </div>
 
             <div className="form-row">
@@ -187,7 +239,8 @@ function Participate() {
                   age.</p>
               </div>
 
-              <select id="age" name="age">
+              <select id="age" name="age" value={formData.artistAge} onChange={(event) => handleChange("artistAge", event)}>
+                <option value=""></option>
                 <option value="under 20">under 20</option>
                 <option value="21-30">21-30</option>
                 <option value="31-40">31-40</option>
@@ -199,7 +252,7 @@ function Participate() {
               </select>
             </div>
 
-            <input type="button" value="submit" className="form-row button" onClick={openConfirmationModal}/>
+            <button type="button" className="form-row button" disabled={disableSubmit()} onClick={openConfirmationModal}>submit</button>
           </form>
 
           <aside className="confirmationModal">
