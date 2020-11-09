@@ -6,8 +6,9 @@ import axios from "axios";
 
 function ExhibitPreview(props) {
   let exhibit = props.exhibit;
+  const s3link = "https://testsubmissions.s3.us-east-2.amazonaws.com/";
 
-  const [submissionData, setSubmissionData] = useState([]);
+  const [submissionData, setSubmissionData] = useState([{},{},{}]);
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/data');
@@ -21,16 +22,16 @@ function ExhibitPreview(props) {
     <section className="content-section exhibit-preview">
       <div className="yellow-triangle-shape shape"/>
       <h3>Current Exhibit</h3>
-      <h4>{submissionData.linkpath ? submissionData[0].exhibitName : ""}</h4>
+      <h4>{submissionData[0].linkpath ? submissionData[0].exhibitName : ""}</h4>
 
       <section className="hang-off-screen">
-        <Circle backgroundImage={submissionData.linkpath ? submissionData[0].image : ""}/>
-        <Circle backgroundImage={submissionData.linkpath ? submissionData[1].image : ""}/>
-        <Circle backgroundImage={submissionData.linkpath ? submissionData[2].image : ""}/>
+        <Circle backgroundImage={submissionData[0].linkpath ? s3link + submissionData[0].imageName : ""}/>
+        <Circle backgroundImage={submissionData[1].linkpath ? s3link + submissionData[1].imageName : ""}/>
+        <Circle backgroundImage={submissionData[2].linkpath ? s3link + submissionData[2].imageName : ""}/>
       </section>
 
       {/*<Link to={submissionData.linkpath ? `/exhibit/${exhibit[0].exhibitName}` : ""} className="button exhibit-link">view exhibit</Link>*/}
-      <Link to={submissionData.linkpath ? submissionData.linkpath : "#"} className="button exhibit-link">view exhibit</Link>
+      <Link to="/full-collection" className="button exhibit-link">view exhibit</Link>
     </section>
   )
 }

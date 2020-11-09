@@ -3,9 +3,19 @@ import './participate.css';
 import EmShape from "../shared/em-shape/emShape";
 import {Link} from 'react-router-dom';
 import {onFileUpload} from "./utility";
+import axios from "axios";
 
 function Participate() {
   const [loading, setLoading] = useState(false);
+
+  const [submissionData, setSubmissionData] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/data');
+      setSubmissionData(response.data.Items);
+    }
+    fetchData();
+  }, [submissionData]);
 
   const [formData, setFormData] = useState({
     title: "",
@@ -21,6 +31,9 @@ function Participate() {
     exhibitName: "Lost Quarantine Experiences",
     exhibitLink: "/exhibit/lost-quarantine-experiences"
   });
+
+  const [submissionLinkPath, setSubmissionLinkPath] = useState("");
+
 
   const disableSubmit = () => {
     if (!formData.title || !formData.medium || !formData.description || !formData.artistAge) {
@@ -78,15 +91,18 @@ function Participate() {
     }
   };
 
+  //After submit button is pushed open confirmation modal
   const openConfirmationModal = async () => {
     document.getElementsByClassName("modalOverlay")[0].classList.toggle("openModal");
     document.getElementsByClassName("confirmationModal")[0].classList.toggle("openModal");
     setLoading(true);
-    await onFileUpload(formData).then(() => {
+    await onFileUpload(formData).then(response => {
+      setSubmissionLinkPath(response.linkpath);
     }).finally(() => {
       setLoading(false);
     });
   };
+
 
   return (
     <main className="participate">
@@ -155,6 +171,7 @@ function Participate() {
                 <option value="photography">photography</option>
                 <option value="sculpture">sculpture</option>
                 <option value="technology">technology</option>
+                <option value="technology">writing</option>
                 <option value="other">other</option>
               </select>
             </div>
@@ -260,7 +277,7 @@ function Participate() {
               <i className="fas fa-times close-icon" onClick={openConfirmationModal}/>
               <h3>Submission received!</h3>
               <h4>Thanks for adding your lost experience to the museum!</h4>
-              <p><Link to="#" className="new-submission-link">You can find your submission here.</Link></p>
+              <p><Link to={submissionLinkPath} className="new-submission-link">You can find your submission here.</Link></p>
               <p>If you have time, check out others' submissions in the <Link to="/full-collection">collection</Link> or
                 connect with others by sharing your submission on social media by using the hashtag <em>#MyLostExperience</em>.
               </p>
