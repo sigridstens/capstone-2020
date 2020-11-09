@@ -3,20 +3,10 @@ import './participate.css';
 import EmShape from "../shared/em-shape/emShape";
 import {Link} from 'react-router-dom';
 import {onFileUpload} from "./utility";
-import axios from "axios";
 
 function Participate() {
+  const [submissionLinkPath, setSubmissionLinkPath] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const [submissionData, setSubmissionData] = useState([]);
-  useEffect(() => {
-    async function fetchData() {
-      const response = await axios.get('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/data');
-      setSubmissionData(response.data.Items);
-    }
-    fetchData();
-  }, [submissionData]);
-
   const [formData, setFormData] = useState({
     title: "",
     image: undefined,
@@ -31,9 +21,6 @@ function Participate() {
     exhibitName: "Lost Quarantine Experiences",
     exhibitLink: "/exhibit/lost-quarantine-experiences"
   });
-
-  const [submissionLinkPath, setSubmissionLinkPath] = useState("");
-
 
   const disableSubmit = () => {
     if (!formData.title || !formData.medium || !formData.description || !formData.artistAge) {
@@ -92,17 +79,20 @@ function Participate() {
   };
 
   //After submit button is pushed open confirmation modal
-  const openConfirmationModal = async () => {
-    document.getElementsByClassName("modalOverlay")[0].classList.toggle("openModal");
-    document.getElementsByClassName("confirmationModal")[0].classList.toggle("openModal");
+  const submit = async () => {
     setLoading(true);
     await onFileUpload(formData).then(response => {
       setSubmissionLinkPath(response.linkpath);
+      toggleConfirmationModal();
     }).finally(() => {
       setLoading(false);
     });
   };
 
+  const toggleConfirmationModal = () => {
+    document.getElementsByClassName("modalOverlay")[0].classList.toggle("openModal");
+    document.getElementsByClassName("confirmationModal")[0].classList.toggle("openModal");
+  };
 
   return (
     <main className="participate">
@@ -269,15 +259,15 @@ function Participate() {
               </select>
             </div>
 
-            <button type="button" className="form-row button" disabled={disableSubmit()} onClick={openConfirmationModal}>submit</button>
+            <button type="button" className="form-row button" disabled={disableSubmit()} onClick={submit}>submit</button>
           </form>
 
           <aside className="confirmationModal">
             <div className="relative">
-              <i className="fas fa-times close-icon" onClick={openConfirmationModal}/>
+              <i className="fas fa-times close-icon" onClick={toggleConfirmationModal}/>
               <h3>Submission received!</h3>
               <h4>Thanks for adding your lost experience to the museum!</h4>
-              <p><Link to={submissionLinkPath} className="new-submission-link">You can find your submission here.</Link></p>
+              <p><Link onClick={toggleConfirmationModal} to={submissionLinkPath} className="new-submission-link">You can find your submission here.</Link></p>
               <p>If you have time, check out others' submissions in the <Link to="/full-collection">collection</Link> or
                 connect with others by sharing your submission on social media by using the hashtag <em>#MyLostExperience</em>.
               </p>

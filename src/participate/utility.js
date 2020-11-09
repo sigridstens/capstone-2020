@@ -24,20 +24,21 @@ export const onFileUpload = async (formData) => {
   }
 
   const now = new Date().toISOString();
-  return await axios.post('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files',
-    {
-      "imageName": imageName,
-      "submissionText": formData.submissionText,
-      "submissionLink": formData.submissionLink,
-      "medium": formData.medium,
-      "description": formData.description,
-      "artistName": formData.artistName,
-      "artistCity": formData.artistCity,
-      "artistState": formData.artistState,
-      "artistAge": formData.artistAge,
-      "title": formData.title,
-      "exhibitName": "",
-      "key": formData.title + now,
-      "linkpath": "/submission/" + formData.title + now
-    });
+  const data = {
+    "imageName": imageName,
+    "submissionText": formData.submissionText,
+    "submissionLink": formData.submissionLink,
+    "medium": formData.medium,
+    "description": formData.description,
+    "artistName": formData.artistName,
+    "artistCity": formData.artistCity,
+    "artistState": formData.artistState,
+    "artistAge": formData.artistAge,
+    "title": formData.title,
+    "exhibitName": "",
+    "key": formData.title + now,
+    "linkpath": "/submission/" + formData.title + now
+  }
+  await axios.post('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files', data);
+  return data;
 };
