@@ -3,7 +3,6 @@ import './header.css';
 import {Link, withRouter} from 'react-router-dom';
 import axios from "axios";
 
-
 const Navigation = (props) => {
     const [route, setRoute] = useState('');
 
@@ -29,7 +28,6 @@ const Navigation = (props) => {
     let getRandomURL = () => {
         if (submissionData.length > 0) {
             let randomSubmission = Math.floor((Math.random() * submissionData.length));
-            console.log(submissionData[randomSubmission]);
             let randomURL = submissionData[randomSubmission].linkpath;
             return randomURL;
         } else {

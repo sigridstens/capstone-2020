@@ -37,7 +37,7 @@ export const onFileUpload = async (formData) => {
     "title": formData.title,
     "exhibitName": "",
     "key": formData.title + now,
-    "linkpath": "/submission/" + formData.title + now
+    "linkpath": "/submission/" + formData.title + now,
   }
   await axios.post('https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files', data);
   return data;

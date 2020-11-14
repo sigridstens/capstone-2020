@@ -3,6 +3,8 @@ import './submission.css';
 import {useParams, Link} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import axios from "axios";
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
 function Submission() {
   const [submissionData, setSubmissionData] = useState([]);
@@ -66,29 +68,46 @@ function Submission() {
                 </div>
                 : <></>}
             </div>
-
-            <div className="submission-description-container">
-              <h5><strong>Submission Description:</strong></h5>
-              <p>{submission.description}</p>
-            </div>
           </section>
 
-          <div className="col col-twothirds">
-              {/*Photo Submission*/}
-            <div className="mySlides fade">
-              {submission.imageName ?
-              <img src={"https://testsubmissions.s3.us-east-2.amazonaws.com/" + submission.imageName} className="submission-image" alt={submission.title}/>
-              : <></>}
-            </div>
+          {(submission.imageName && submission.submissionText) ?
+            <AwesomeSlider className="col col-twothirds awssld">
+                <div>
+                  {/*Photo Submission*/}
+                  <img src={"https://testsubmissions.s3.us-east-2.amazonaws.com/" + submission.imageName} className="submission-image" alt={submission.title}/>
+                </div>
 
-            <div className="mySlides fade">
-              {submission.submissionText ?
-              <div className="submission-text">
-                <p>{submission.submissionText}</p>
+                <div>
+                  {/*Text Submission*/}
+                  <div className="submission-text">
+                    <p>{submission.submissionText}</p>
+                  </div>
+                </div>
+            </AwesomeSlider>
+        :
+          <>
+            {submission.imageName ?
+              <div className="col col-twothirds">
+                {/*Photo Submission*/}
+                <img src={"https://testsubmissions.s3.us-east-2.amazonaws.com/" + submission.imageName} className="submission-image" alt={submission.title}/>
               </div>
-              : <></>}
-            </div>
-          </div>
+            : <></>}
+
+            {submission.submissionText ?
+              <div className="col col-twothirds">
+                {/*Text Submission*/}
+                <div className="submission-text">
+                  <p>{submission.submissionText}</p>
+                </div>
+              </div>
+            : <></>}
+          </>
+        }
+        </div>
+
+        <div className="content-section submission-description-container">
+          <h5><strong>Submission Description:</strong></h5>
+          <p>{submission.description}</p>
         </div>
       </section>
 

@@ -3,6 +3,7 @@
 }
 
 .submission .col-container {
+    padding-bottom: 1em;
 }
 
 .submission .content-section {
@@ -53,7 +54,7 @@
 }
 
 .submission-description-container {
-    margin: 3em 0;
+    margin: 1.75em;
 }
 
 .submission-description-container p {
@@ -63,6 +64,25 @@
 .submission .call-to-participate {
     margin-top: 7rem;
     padding-top: 10rem;
+}
+
+/* Carousel Slider */
+.awssld.awssld {
+    --organic-arrow-height: 20px;
+    --slider-height-percentage: 100%;
+    --slider-transition-duration: 538ms;
+    --organic-arrow-thickness: 5px;
+    --organic-arrow-border-radius: 0px;
+    --organic-arrow-color: #ddd413;
+    --control-button-width: 8%;
+    --control-button-height: 25%;
+    --control-button-background: transparent;
+    --control-bullet-color: #00000d;
+    --control-bullet-active-color: #ddd413;
+    --loader-bar-color: #ddd413;
+    --loader-bar-height: 5px;
+    --content-background-color: #fff;
+    z-index: 0;
 }
 
 @media screen and (max-width: 950px) {
