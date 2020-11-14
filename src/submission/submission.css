@@ -21,15 +21,16 @@
 
 .submission .submission-text {
     font-size: 1.15em;
-    border: .25em solid var(--yellow);
+    border: .25em solid var(--darkgreen);
     color: var(--darkgreen);
     padding: 1.25em;
     white-space: pre-line;
-    margin: 1em 0;
+    margin: 1em 0.25em;
 }
 
 .submission .submission-text p {
     margin: 0;
+    padding: 1em;
 }
 
 .submission-link {
@@ -72,17 +73,21 @@
     --slider-height-percentage: 100%;
     --slider-transition-duration: 538ms;
     --organic-arrow-thickness: 5px;
-    --organic-arrow-border-radius: 0px;
-    --organic-arrow-color: #ddd413;
-    --control-button-width: 8%;
+    --organic-arrow-border-radius: 5px;
+    --organic-arrow-color: var(--yellow);
+    --control-button-width: 12%;
     --control-button-height: 25%;
     --control-button-background: transparent;
-    --control-bullet-color: #00000d;
-    --control-bullet-active-color: #ddd413;
+    --control-bullet-color: var(--yellow);
+    --control-bullet-active-color: var(--yellow);
     --loader-bar-color: #ddd413;
     --loader-bar-height: 5px;
     --content-background-color: #fff;
     z-index: 0;
+}
+
+.awssld__controls button .awssld__controls__arrow-left, .awssld__controls button .awssld__controls__arrow-right {
+    opacity: 100% !important;
 }
 
 @media screen and (max-width: 950px) {
