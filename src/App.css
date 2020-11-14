@@ -139,6 +139,14 @@ em {
     flex-basis: 50%;
 }
 
+.col-twothirds {
+    flex-basis: 66%;
+}
+
+.col-onethird {
+    flex-basis: 33%;
+}
+
 .content-section {
     padding: 5rem 15%;
     position: relative;
