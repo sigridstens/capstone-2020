@@ -21,7 +21,6 @@
 
 .submission .submission-text {
     font-size: 1.15em;
-    border: .25em solid var(--darkgreen);
     color: var(--darkgreen);
     padding: 1.25em;
     white-space: pre-line;
@@ -90,10 +89,25 @@
     opacity: 100% !important;
 }
 
+.awssld__bullets {
+    bottom: 0 !important;
+}
+
+/*.awssld__content, .awssld__box, .awssld--active, .awssld__container {
+    height: max-content !important;
+}*/
+
+
+@media screen and (min-width: 1200px) {
+    .awssld__container {
+        padding-bottom: 0 !important;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .submission .col-container {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .submission .col-half {
@@ -106,5 +120,44 @@
         position: relative;
         width: 100vw;
         min-height: 20em;
+    }
+
+    .submission .breadcrumbs {
+        padding: 0 15%;
+    }
+
+    .submission .col-text {
+        width: 100%;
+        padding: 1em 0;
+        margin: 0;
+    }
+
+    .submission-description-container {
+        margin: 0;
+        padding: 0  15%;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .submission {
+        padding-top: 3em;
+    }
+
+    .submission .breadcrumbs {
+        padding: 0 10%;
+    }
+
+    .submission .col-text {
+        width: 100%;
+        padding: 1em 0;
+        margin: 0;
+    }
+
+    .submission-description-container {
+        margin: 0;
+        padding: 1.75em;
+        width: 100%;
     }
 }
