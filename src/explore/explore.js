@@ -35,7 +35,7 @@ function Explore() {
     <main className="explore">
       <ExhibitPreview exhibit={exhibits[exhibitNames[0]]}/>
 
-      <section className="content-section collection-preview">
+      {/*<section className="content-section collection-preview">
         <div className="brown-rectangle"/>
         <div className="red-rectangle"/>
 
@@ -53,7 +53,7 @@ function Explore() {
         <div className="col-container">
           <Link to="/full-collection" className="button">browse experiences</Link>
         </div>
-      </section>
+      </section>*/}
 
       <CallToParticipate/>
     </main>

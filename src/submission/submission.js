@@ -3,8 +3,8 @@ import './submission.css';
 import {useParams, Link} from 'react-router-dom';
 import CallToParticipate from "../shared/call-to-participate/callToParticipate";
 import axios from "axios";
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 function Submission() {
   const [submissionData, setSubmissionData] = useState([]);
@@ -34,13 +34,13 @@ function Submission() {
     <main className= "submission">
       <section>
         <p className="breadcrumbs">
-          {submission.exhibitName ?
+          {/*{submission.exhibitName ?
             <>
               <Link to={`/exhibit/${submission.exhibitName}`}>{submission.exhibitName}</Link>
             </>
-            :
+            :*/}
             <Link to="/full-collection">Full Collection</Link>
-          }
+          {/* } */}
           <span> > {submission.title}</span>
         </p>
 
@@ -71,7 +71,7 @@ function Submission() {
           </section>
 
           {(submission.imageName && submission.submissionText) ?
-            <AwesomeSlider className="col col-twothirds awssld">
+            <Carousel className="col col-twothirds">
                 <div>
                   {/*Photo Submission*/}
                   <img src={"https://testsubmissions.s3.us-east-2.amazonaws.com/" + submission.imageName} className="submission-image" alt={submission.title}/>
@@ -83,7 +83,7 @@ function Submission() {
                     <p>{submission.submissionText}</p>
                   </div>
                 </div>
-            </AwesomeSlider>
+            </Carousel>
         :
           <>
             {submission.imageName ?

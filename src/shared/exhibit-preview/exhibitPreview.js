@@ -20,8 +20,10 @@ function ExhibitPreview(props) {
     return (
     <section className="content-section exhibit-preview">
       <div className="yellow-triangle-shape shape"/>
-      <h3>Current Exhibit</h3>
-      <h4>{submissionData[0].linkpath ? submissionData[0].exhibitName : ""}</h4>
+      {/*<h3>Current Exhibit</h3>
+      <h4>{submissionData[0].linkpath ? submissionData[0].exhibitName : ""}</h4>*/}
+      <h3>Available Now</h3>
+      <h4>Full Collection</h4>
 
       <section className="hang-off-screen">
         <Circle backgroundImage={submissionData[0].linkpath ? s3link + submissionData[0].imageName : ""} />
@@ -31,7 +33,7 @@ function ExhibitPreview(props) {
 
       {/* // For when there is an exhibit
       <Link to={submissionData.linkpath ? `/exhibit/${exhibit[0].exhibitName}` : ""} className="button exhibit-link">view exhibit</Link>*/}
-      <Link to="/full-collection" className="button exhibit-link">view exhibit</Link>
+      <Link to="/full-collection" className="button exhibit-link">view collection</Link>
     </section>
   )
 }
