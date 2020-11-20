@@ -10,13 +10,15 @@ export const onFileUpload = async (formData) => {
     const sanitizedName = nameParts[0].replace(/[^a-zA-Z0-9]/g, '');
 
     const response = await axios.get(`https://p1vu0ulxhc.execute-api.us-east-2.amazonaws.com/beta/files?fileName=${sanitizedName}&fileType=${nameParts[1]}`);
-    const binary = atob(formData.image.fileData.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));
+    const binary = atob(formData.image.fileData.replace(/^data:image\/(png|jpeg|jpg|gif);base64,/, ''));
     const arr = [];
     for (let i = 0; i < binary.length; i++) {
       arr.push(binary.charCodeAt(i));
     }
     if (nameParts[1] === 'png') {
       fileType = 'png';
+    } else if (nameParts[1] === 'gif') {
+      fileType = 'gif';
     }
     const blobData = new Blob([new Uint8Array(arr)], {type: `image/${fileType}`});
     imageName = sanitizedName + '.' + nameParts[1];
