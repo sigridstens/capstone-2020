@@ -91,23 +91,6 @@
     height: 1.5em;
 }
 
-.call-to-action .brown-rectangle {
-    bottom: auto;
-    top: 0;
-    right: auto;
-    left: 0;
-    height: 3em;
-}
-
-.call-to-action .red-rectangle {
-    left: auto;
-    right: 0;
-    width: 50vw;
-    height: 2em;
-    top: unset;
-    bottom: 0;
-}
-
 .home .rectangle-shape {
     top: 0;
 }
@@ -115,6 +98,24 @@
 .call-to-action:nth-child(6) .button {
     margin: 2em 0;
 }
+
+/*Extra Large Sized Screens*/
+@media screen and (min-width: 1700px) {
+    .home .rectangle {
+        left: 68vw;
+    }
+
+    .home .circle-text {
+        margin-bottom: 4em;
+        font-size: 1.5vw;
+    }
+
+    .home .call-to-action.section-two {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 
 /*Tablet Sized Screens*/
 @media screen and (max-width: 900px) {

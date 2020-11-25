@@ -9,10 +9,9 @@
 }
 
 .full-collection .yellow-triangle-shape {
-    transform: scale(.5);
-    top: -2em;
-    left: -15em;
-    border-top: 40em solid var(--darkgreen);
+    top: 7em;
+    right: 70vw;
+    border-top: 100em solid var(--darkgreen);
 }
 
 .full-collection h3, .full-collection h4 {
@@ -22,4 +21,30 @@
 .full-collection h3 {
     color: var(--brown);
     margin-top: 2em;
+}
+
+/*Extra Large Sized Screens*/
+
+@media screen and (min-width: 1700px) {
+    .full-collection .yellow-triangle-shape {
+        right: 75vw;
+    }
+}
+
+/*Tablet Sized Screens*/
+@media screen and (max-width: 900px) {
+    .full-collection .yellow-triangle-shape {
+        right: 60vw;
+    }
+
+    .full-collection {
+        padding-top: 45vw;
+    }
+}
+
+/*Small Sized Screens*/
+@media screen and (max-width: 768px) {
+     .full-collection .yellow-triangle-shape {
+         right: 50vw;
+     }
 }

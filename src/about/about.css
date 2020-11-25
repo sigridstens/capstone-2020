@@ -1,5 +1,6 @@
 .about {
     padding-top: 10em;
+    overflow: hidden;
 }
 
 .about .em-shape {
@@ -8,8 +9,15 @@
     width: 40vw
 }
 
+about .rectangle {
+    height: 100%;
+    width: 100%;
+    background-color: var(--darkgreen);
+    top: 0;
+    left: 85vw;
+}
+
 .about .content-section {
-    min-height: 25em;
     align-items: center;
 }
 
@@ -39,12 +47,39 @@
     margin: auto 0 auto auto;
 }
 
+/*Extra Large Sized Screens*/
+@media screen and (min-width: 1700px) {
+    .about .rectangle {
+        left: 76vw;
+    }
+    .about .call-to-participate {
+        margin-top: 25vw;
+    }
+}
+
+/*Tablet Screen Size*/
+@media screen and (min-width: 900px) and (max-width: 1700px) {
+    .about .rectangle {
+        left: 90vw;
+    }
+}
+
+/*Tablet Screen Size*/
+@media screen and (max-width: 900px) {
+    .about .rectangle {
+        visibility: hidden;
+    }
+}
+
+/*Small Screen Size*/
 @media screen and (max-width: 768px) {
     .about .col-container {
         justify-content: center;
     }
+
 }
 
+/*Mobile Screen Size*/
 @media screen and (max-width: 480px) {
     .about .col-text p {
         font-size: .75em;

@@ -151,7 +151,7 @@ em {
     padding: 5rem 15%;
     position: relative;
     width: 100vw;
-    min-height: 20em;
+    min-height: 25em;
 }
 
 main {
@@ -185,8 +185,8 @@ main {
 .yellow-triangle-shape {
     width: 0;
     height: 0;
-    border-top: 40em solid var(--yellow);
-    border-right: 40em solid transparent;
+    border-top: 100em solid var(--yellow);
+    border-right: 100em solid transparent;
 }
 
 /* Filtering Styles */
@@ -227,7 +227,6 @@ main {
         padding: 5rem 15%;
         position: relative;
         width: 100vw;
-        min-height: 20em;
     }
 }
 

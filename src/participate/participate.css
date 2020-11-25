@@ -175,7 +175,14 @@ button, input[type="submit"], input[type="reset"] {
     margin: auto;
 }
 
-/*Small Screen Sizes*/
+/*Extra Large Sized Screens*/
+@media screen and (min-width: 1700px) {
+    .participate .rectangle {
+        left: 68vw;
+    }
+}
+
+/*Tablet Sized Screen*/
 @media screen and (max-width: 900px) {
     .participation-details .col-text{
         font-size: 1.2rem;
@@ -202,6 +209,9 @@ button, input[type="submit"], input[type="reset"] {
 
     .participate .col-text {
         width: 65%;
+    }
+
+    .participate .col-container:nth-of-type(2) .col-text {  width: 90%;
     }
 
     .submission-form {
