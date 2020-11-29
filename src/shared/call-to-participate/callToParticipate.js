@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 function CallToParticipate() {
   return (
     <section className="content-section call-to-participate">
-      <div className="rectangle-shape shape"/>
+      <div className="rectangle-shape shape animation"/>
 
       <div className="col-text">
         <h4>Want to share your lost experience?</h4>
@@ -14,7 +14,7 @@ function CallToParticipate() {
         </Link>
       </div>
 
-      <div className="blue-circle-shape shape">
+      <div className="blue-circle-shape animation shape">
       </div>
     </section>
   )

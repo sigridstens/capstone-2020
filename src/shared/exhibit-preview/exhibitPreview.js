@@ -19,7 +19,7 @@ function ExhibitPreview(props) {
 
     return (
     <section className="content-section exhibit-preview">
-      <div className="yellow-triangle-shape shape"/>
+      <div className="yellow-triangle-shape shape animation"/>
       {/*<h3>Current Exhibit</h3>
       <h4>{submissionData[0].linkpath ? submissionData[0].exhibitName : ""}</h4>*/}
       <h3>Available Now</h3>

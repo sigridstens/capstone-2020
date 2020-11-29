@@ -46,7 +46,7 @@ function Home() {
 
             <Link to="/participate" className="button center">participate</Link>
 
-            <div>
+            <div className="animation">
               <EmShape className="em-shape shape"/>
               <div className="rectangle shape"/>
             </div>

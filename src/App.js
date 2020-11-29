@@ -13,6 +13,10 @@ import ExhibitsOverview from "./exhibits-overview/exhibits-overview";
 import ScrollToTop from "./scroll-to-top/scrollToTop";
 import Participate from "./participate/participate";
 
+window.addEventListener('scroll', () => {
+  document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
+
 function App() {
   return (
       <BrowserRouter>

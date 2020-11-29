@@ -39,12 +39,16 @@
     height: 25em;
 }
 
-.rectangle {
+.home .rectangle {
     height: 100%;
-    width: 100%;
+    width: 110vw;
     background-color: var(--darkgreen);
     top: 0;
-    left: 85vw;
+    left: 95vw;
+}
+
+.home .em-shape {
+    left: 65vw;
 }
 
 .description .col-text {
@@ -98,6 +102,44 @@
 .call-to-action:nth-child(6) .button {
     margin: 2em 0;
 }
+
+/* Animations */
+.home .animation .em-shape {
+    animation: slideAcrossEmShape 8s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -30s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideAcrossEmShape {
+    from {
+        left: -40vw;
+    }
+
+    to {
+        left: 65vw;
+    }
+
+}
+
+.home .animation .rectangle {
+    animation: slideAcrossGreenRect 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -25s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideAcrossGreenRect {
+    from {
+        left: 10vw;
+    }
+
+    to {
+        left: 95vw;
+    }
+
+}
+
 
 /*Extra Large Sized Screens*/
 @media screen and (min-width: 1700px) {

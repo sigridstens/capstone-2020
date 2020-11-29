@@ -2,17 +2,58 @@
     margin: 10em 0 3em 0;
 }
 
-.rectangle-shape {
+.call-to-participate .rectangle-shape {
     background-color: var(--pink);
     height: 2em;
-    width: 70%;
-    left: 0;
+    width: 70vw;
+    right: 30vw;
     top: 0;
 }
 
-.blue-circle-shape {
+.call-to-participate .blue-circle-shape {
     left: 85vw;
     top: 5em;
+
+}
+
+/* Animations */
+.call-to-participate .animation.rectangle-shape {
+    animation: slideFromLeftPinkRect 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -2s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideFromLeftPinkRect {
+    from {
+        right: 60vw;
+        top: 0;
+
+    }
+
+    to {
+        right: 20vw;
+        top: -10vh;
+    }
+}
+
+.call-to-participate .animation.blue-circle-shape {
+    animation: slideFromLeftBlueCircle 6s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -4s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideFromLeftBlueCircle {
+    from {
+        left: 95vw;
+        top: 0;
+    }
+
+    to {
+        left: 60vw;
+        top: 20vh;
+    }
 
 }
 

@@ -47,6 +47,108 @@ about .rectangle {
     margin: auto 0 auto auto;
 }
 
+/***************
+   Animations
+***************/
+.animation.red-rectangle {
+    animation: slideFromLeftRed 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -2s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideFromLeftRed {
+    from {
+        right: 60vw;
+        top: 0;
+
+    }
+
+    to {
+        right: 50vw;
+        top: -30vh;
+    }
+}
+
+.about .animation .em-shape {
+    animation: slideFromRightEmShape 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -10s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideFromRightEmShape {
+    from {
+        left: 60vw;
+        top: 0;
+    }
+
+    to {
+        left: 50vw;
+        top: 10vh;
+
+    }
+}
+
+.about .animation .rectangle {
+    animation: slideFromRightGreenRect 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -10s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideFromRightGreenRect {
+    from {
+        left: 60vw;
+        top: 0;
+
+    }
+
+    to {
+        left: 90vw;
+        top: 10vh;
+
+    }
+}
+
+.animation.brown-rectangle {
+    animation: slideFromRightBrownRect 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -8s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideFromRightBrownRect {
+    from {
+        left: 60vw;
+        bottom: -10vh;
+    }
+
+    to {
+        left: 50vw;
+        bottom: 0;
+    }
+}
+
+.animation.yellow-triangle-shape {
+    animation: slideFromLeftYellow 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -7s);
+    animation-iteration-count: 1;
+}
+
+@keyframes slideFromLeftYellow {
+    from {
+        right: 80vw;
+        top: -10vh;
+    }
+
+    to {
+        right: 50vw;
+        top: 5vh;
+    }
+}
+
 /*Extra Large Sized Screens*/
 @media screen and (min-width: 1700px) {
     .about .rectangle {

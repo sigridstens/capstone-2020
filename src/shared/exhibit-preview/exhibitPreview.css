@@ -34,6 +34,25 @@ h4 {
     visibility: hidden;
 }
 
+/* Animations */
+.exhibit-preview .animation.yellow-triangle-shape {
+    animation: animationHomeYellow 10s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -10s);
+    animation-iteration-count: 1;
+}
+
+@keyframes animationHomeYellow {
+    from {
+        right: 40vw;
+    }
+
+    to {
+        right: 90vw;
+    }
+}
+
+
 /*Tablet Sized Screens*/
 @media screen and (max-width: 900px) {
     .exhibit-preview {
