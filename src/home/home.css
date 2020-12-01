@@ -74,6 +74,9 @@
     font-size: 1.85vw;
     line-height: 2.2vw;
     margin: 0;
+    position: absolute;
+    right: 20vw;
+    bottom: 5vh;
 }
 
 .call-to-action .hero {
@@ -123,28 +126,68 @@
 }
 
 .home .animation .rectangle {
-    animation: slideAcrossGreenRect 5s linear infinite;
+    animation: homeSlideRect 8s linear infinite;
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -25s);
+    animation-delay: calc(var(--scroll) * -30s);
     animation-iteration-count: 1;
 }
 
-@keyframes slideAcrossGreenRect {
+@keyframes homeSlideRect {
     from {
-        left: 10vw;
+        left: 0;
     }
 
     to {
-        left: 95vw;
+        left: 98vw;
     }
 
+}
+
+.home .animation.circle-text {
+    animation: blueCircleText 8s ease-in-out infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -5s);
+    animation-iteration-count: 1;
+}
+
+@keyframes blueCircleText {
+    0% {
+        right: 30vw;
+        bottom: 10vh;
+    }
+
+    25% {
+        right: 25vw;
+        bottom: 2.5vh;
+    }
+
+    50% {
+        right: 20vw;
+        bottom: 0;
+    }
+
+    75% {
+        right: 15vw;
+        bottom: 2.5vh;
+    }
+
+    100% {
+        right: 10vw;
+        bottom: 10vh;
+    }
 }
 
 
 /*Extra Large Sized Screens*/
 @media screen and (min-width: 1700px) {
-    .home .rectangle {
-        left: 68vw;
+    @keyframes homeSlideRect {
+        from {
+            left: -10vw;
+        }
+
+        to {
+            left: 90vw;
+        }
     }
 
     .home .circle-text {

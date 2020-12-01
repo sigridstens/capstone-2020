@@ -97,8 +97,10 @@ function Participate() {
   return (
     <main className="participate">
       <section className=" content-section col-container participation-details">
-        <EmShape className="em-shape shape"/>
-        <div className="rectangle shape"/>
+        <div className="animation">
+          <EmShape className="em-shape shape"/>
+          <div className="rectangle shape"/>
+        </div>
 
         <div className="col-text">
           <h4>How to participate</h4>
@@ -117,7 +119,7 @@ function Participate() {
 
       <section className="content-section col-container submission-form">
         <div className="col-text">
-          <div className="yellow-triangle-shape shape"/>
+          <div className="animation yellow-triangle-shape shape"/>
 
           <p>When your lost experience is ready, add it to the collection here!</p>
 

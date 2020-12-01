@@ -10,6 +10,14 @@
     padding: 2rem 15%;
 }
 
+.participate .rectangle {
+    height: 100%;
+    width: 100%;
+    background-color: var(--darkgreen);
+    top: 0;
+    left: 85vw;
+}
+
 .participation-details .col-text {
     margin: auto 0;
 }
@@ -173,6 +181,70 @@ button, input[type="submit"], input[type="reset"] {
 
 .participate .col-container:nth-of-type(2) .col-text {
     margin: auto;
+}
+
+
+/***************
+   Animations
+***************/
+.participate .animation .em-shape {
+    animation: participateEmShape 10s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -15s);
+    animation-iteration-count: 1;
+}
+
+@keyframes participateEmShape {
+    from {
+        left: 60vw;
+        top: 0;
+    }
+
+    to {
+        left: 40vw;
+        top: 20vh;
+
+    }
+}
+
+.participate .animation .rectangle {
+    animation: participateGreenRect 10s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -15s);
+    animation-iteration-count: 1;
+}
+
+@keyframes participateGreenRect {
+    from {
+        left: 90vw;
+        top: 0;
+
+    }
+
+    to {
+        left: 70vw;
+        top: 20vh;
+
+    }
+}
+
+.participate .animation.yellow-triangle-shape {
+    animation: participateYellowTri 5s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -7s);
+    animation-iteration-count: 1;
+}
+
+@keyframes participateYellowTri {
+    from {
+        right: 80vw;
+        top: 5vh;
+    }
+
+    to {
+        right: 50vw;
+        top: -10vh;
+    }
 }
 
 /*Extra Large Sized Screens*/

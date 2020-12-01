@@ -62,7 +62,7 @@ function Home() {
             <p>Everyone has lost experiences.</p>
           </div>
 
-          <p className="circle-text">Some of them are big and easy to notice.</p>
+          <p className="animation circle-text">Some of them are big and easy to notice.</p>
         </section>
 
         <section className=" content-section section-two col-container call-to-action">

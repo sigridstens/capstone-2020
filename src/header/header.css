@@ -207,7 +207,7 @@ header .main-nav .menu-icon, header .main-nav .close-icon {
 
     header .main-nav.nav-open ul ul {
         display: block;
-        margin: 0  2em;
+        padding: 1em 2em;
     }
 
 
@@ -226,7 +226,6 @@ header .main-nav .menu-icon, header .main-nav .close-icon {
         display: block;
         text-align: left;
         background-color: transparent;
-        padding: 0;
         transform: translateX(0);
     }
 

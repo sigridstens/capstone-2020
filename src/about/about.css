@@ -9,7 +9,7 @@
     width: 40vw
 }
 
-about .rectangle {
+.about .rectangle {
     height: 100%;
     width: 100%;
     background-color: var(--darkgreen);
@@ -99,7 +99,7 @@ about .rectangle {
 
 @keyframes slideFromRightGreenRect {
     from {
-        left: 60vw;
+        left: 80vw;
         top: 0;
 
     }

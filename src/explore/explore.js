@@ -9,28 +9,6 @@ import {exhibitNames, exhibits} from "../exhibits-overview/exhibits-overview";
 
 
 function Explore() {
-  const data = [
-    {
-      image: "/bulletin-submission.jpg"
-    },
-    {
-      image: "/camping-submission.jpg"
-    },
-    {
-      image: "/family-submission.jpg"
-    },
-    {
-      image: "/friendship-submission.jpg"
-    },
-
-    {
-      image: "/porch-submission.jpg"
-    },
-    {
-      image: "/travel-submission.jpg"
-    }
-  ];
-
   return(
     <main className="explore">
       <ExhibitPreview exhibit={exhibits[exhibitNames[0]]}/>

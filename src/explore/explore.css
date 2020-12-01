@@ -1,5 +1,7 @@
 .explore {
     padding-top: 10em;
+    height: fit-content;
+    overflow-y: hidden;
 }
 
 .explore .exhibit-preview {
