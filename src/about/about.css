@@ -99,13 +99,13 @@
 
 @keyframes slideFromRightGreenRect {
     from {
-        left: 80vw;
+        left: 95vw;
         top: 0;
 
     }
 
     to {
-        left: 90vw;
+        left: 85vw;
         top: 10vh;
 
     }
