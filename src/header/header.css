@@ -128,9 +128,10 @@ header a {
 header .rectangle-shape {
     position: absolute;
     height: 1em;
-    width: 100%;
+    width: 100vw;
     background-color: var(--pink);
     top: 0;
+    left: 0;
 }
 
 header .main-nav .menu-icon, header .main-nav .close-icon {

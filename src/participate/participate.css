@@ -217,7 +217,7 @@ button, input[type="submit"], input[type="reset"] {
 
 @keyframes participateGreenRect {
     from {
-        left: 90vw;
+        left: 95vw;
         top: 0;
 
     }

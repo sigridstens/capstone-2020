@@ -9,7 +9,7 @@ function Footer() {
           <nav className="navigation footer-nav col-half">
             <ul>
               <li className="nav-item">
-                <Link to="/" className=''>Collection</Link>
+                <Link to="/full-collection" className=''>Collection</Link>
               </li>
               <li className="nav-item">
                 <Link to="/participate" className=''>Participate</Link>
