@@ -1,6 +1,7 @@
 .participate {
     padding-top: 10em;
     position: relative;
+    overflow-y: hidden;
 }
 
 .participation-details {
