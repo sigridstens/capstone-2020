@@ -84,10 +84,14 @@
     padding: 0 15%;
 }
 
-.call-to-action .multiple-circle {
-    width: 80%;
-    padding: 10% 4%
-    10% 16%;
+.cta-section-two {
+    padding: 15em 15% 5rem 0;
+}
+
+.cta-section-two .multiple-circle {
+    width: 100%;
+    padding: 0 3em 0 0;
+    z-index: -1;
 }
 
 .call-to-action .col-two {
@@ -158,17 +162,17 @@
 
     25% {
         right: 25vw;
-        bottom: 2.5vh;
+        bottom: -2.5vh;
     }
 
     50% {
         right: 20vw;
-        bottom: 0;
+        bottom: -10vh;
     }
 
     75% {
         right: 15vw;
-        bottom: 2.5vh;
+        bottom: -2.5vh;
     }
 
     100% {
@@ -179,7 +183,7 @@
 
 
 /*Extra Large Sized Screens*/
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1500px) {
     @keyframes homeSlideRect {
         from {
             left: -10vw;
@@ -195,7 +199,7 @@
         font-size: 1.5vw;
     }
 
-    .home .call-to-action.section-two {
+    .home .call-to-action.cta-section-two {
         align-items: center;
         justify-content: center;
     }

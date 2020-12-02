@@ -65,9 +65,9 @@ function Home() {
           <p className="animation circle-text">Some of them are big and easy to notice.</p>
         </section>
 
-        <section className=" content-section section-two col-container call-to-action">
-          <div className="col-text">
-            <img className="multiple-circle" src={process.env.PUBLIC_URL + "/multiple-shapes@2x.png"}/>
+        <section className="content-section cta-section-two col-container">
+          <div className="col-image">
+            <img className="multiple-circle" src={process.env.PUBLIC_URL + "/small-dots.gif"}/>
           </div>
 
           <div className="col-text col-two">
