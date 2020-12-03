@@ -94,6 +94,10 @@
     z-index: -1;
 }
 
+.cta-section-two .col-image {
+    flex-basis: 50%;
+}
+
 .call-to-action .col-two {
     align-self: flex-end;
 }
@@ -199,7 +203,7 @@
         font-size: 1.5vw;
     }
 
-    .home .call-to-action.cta-section-two {
+    .home .cta-section-two {
         align-items: center;
         justify-content: center;
     }
@@ -315,11 +319,52 @@
         font-size: 3.5vw;
         line-height: 4.5vw;
     }
+
+    @keyframes blueCircleText {
+        0% {
+            right: 40vw;
+            bottom: -20vh;
+        }
+
+        25% {
+            right: 30vw;
+            bottom: -22.5.5vh;
+        }
+
+        50% {
+            right: 20vw;
+            bottom: -30vh;
+        }
+
+        75% {
+            right: 10vw;
+            bottom: -22.5vh;
+        }
+
+        100% {
+            right: 0;
+            bottom: -20vh;
+        }
+    }
+
+    .multiple-circle {
+        padding: 0;
+        width: 100%;
+    }
+
+    .cta-section-two .col-two {
+        margin: 0 15%;
+        width: 80%;
+    }
+
+    .call-to-action {
+        padding-top: 2em;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .home .rectangle {
-       visibility: hidden;
+        visibility: hidden;
     }
 
     .hero h2 {
@@ -347,7 +392,7 @@
     }
 
     .circle-text {
-        transform:translate(0, 0);
+        transform: translate(0, 0);
         background-color: var(--blue);
         padding: 9em 4.75em;
         height: 80vw;
@@ -357,4 +402,43 @@
         font-size: 4vw;
         line-height: 5vw;
     }
+
+    .animation, .animation .em-shape, .animation .rectangle {
+        animation: none !important;
+    }
+
+    .circle-text {
+        bottom: -5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cta-section-two {
+        padding: 6em 15% 2em 15%;
+        min-height: unset;
+    }
+
+    .cta-section-two .multiple-circle {
+        padding: 0;
+    }
+
+    .cta-section-two .col-two {
+        margin: 0;
+        width: 100%;
+    }
+
+    .cta-section-two .col-two p {
+        font-size: .75em;
+        line-height: 1.5rem;
+    }
+
+    .call-to-action {
+        padding-top: 0;
+    }
+
+    .call-to-action .center  {
+        padding: 0 0 1em 0;
+        margin: unset;
+    }
+
 }

@@ -67,7 +67,7 @@ function Home() {
 
         <section className="content-section cta-section-two col-container">
           <div className="col-image">
-            <img className="multiple-circle" src={process.env.PUBLIC_URL + "/small-dots.gif"}/>
+            <img className="multiple-circle" src={process.env.PUBLIC_URL + "/multiple-dots.gif"}/>
           </div>
 
           <div className="col-text col-two">
