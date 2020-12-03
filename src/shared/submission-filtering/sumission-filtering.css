@@ -1,5 +1,20 @@
+.filtering-container {
+    width: 100%;
+    position: absolute;
+    right: 0;
+}
+
 .filtering {
-    padding-right: 3em;
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: var(--brown);
+    padding: .85rem 3em .85rem 1.25rem;
+    font-family: FatFrank, sans-serif;
+    font-size: 1.25rem;
+    color: var(--white);
+    width: fit-content;
 }
 
 .filtering h5{
@@ -82,4 +97,21 @@ ul.filter-nav.nav-open {
     color: var(--darkgreen);
 }
 
+.active-filter {
+    position: absolute;
+    top: 3em;
+    right: 3em;
+}
+
+.remove-filter-button {
+    color: var(--white);
+    background-color: var(--yellow);
+    font-size: .8em;
+    margin: 0 1em;
+}
+
+.remove-filter-button:hover {
+    color: var(--black);
+    background-color: var(--pink);
+}
 

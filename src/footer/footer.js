@@ -23,10 +23,7 @@ function Footer() {
           <div className="col-half navigation right-side">
             <ul className="social">
               <li>
-                <Link to=""><i className="fab fa-instagram"></i></Link>
-              </li>
-              <li>
-                <Link to=""><i className="fab fa-facebook-square"></i></Link>
+                <a href="https://www.instagram.com/themuseumoflostexperiences/" target="blank"><i className="fab fa-instagram"></i></a>
               </li>
             </ul>
             <p>Copyright 2020</p>

@@ -1,5 +1,9 @@
 .submission {
-    padding-top: 10em;
+    padding-top: 13em;
+}
+
+.submission-section {
+    min-height: 40em;
 }
 
 .submission .col-container {
@@ -55,6 +59,7 @@
 
 .submission-description-container {
     margin: 1.75em;
+    min-height: unset;
 }
 
 .submission-description-container p {
