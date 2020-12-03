@@ -253,6 +253,18 @@ button, input[type="submit"], input[type="reset"] {
     .participate .rectangle {
         left: 68vw;
     }
+    @keyframes participateGreenRect {
+    from {
+        left: 80vw;
+        top: 0;
+
+    }
+
+    to {
+        left: 60vw;
+        top: 20vh;
+
+    }}
 }
 
 /*Tablet Sized Screen*/

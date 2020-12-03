@@ -41,7 +41,7 @@
 
 .home .rectangle {
     height: 100%;
-    width: 110vw;
+    width: 140vw;
     background-color: var(--darkgreen);
     top: 0;
     left: 95vw;
@@ -188,13 +188,30 @@
 
 /*Extra Large Sized Screens*/
 @media screen and (min-width: 1500px) {
-    @keyframes homeSlideRect {
+    .home .rectangle {
+        left: 90vw;
+    }
+
+    .home .em-shape {
+        left: 70vw;
+    }
+    @keyframes slideAcrossEmShape {
         from {
-            left: -10vw;
+            left: -40vw;
         }
 
         to {
-            left: 90vw;
+            left: 70vw;
+        }
+    }
+
+    @keyframes homeSlideRect {
+        from {
+            left: -25vw;
+        }
+
+        to {
+            left: 85vw;
         }
     }
 

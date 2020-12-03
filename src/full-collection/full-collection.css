@@ -2,6 +2,7 @@
     padding-top: 15em ;
     position: relative;
     min-height: 42em;
+    overflow-y: hidden;
 }
 
 .full-collection .content-section {

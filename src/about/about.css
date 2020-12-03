@@ -131,7 +131,7 @@
 }
 
 .animation.yellow-triangle-shape {
-    animation: slideFromLeftYellow 5s linear infinite;
+    animation: slideFromLeftYellow 7s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -7s);
     animation-iteration-count: 1;
@@ -156,6 +156,18 @@
     }
     .about .call-to-participate {
         margin-top: 25vw;
+    }
+
+    @keyframes slideFromRightGreenRect {
+        from {
+            left: 80vw;
+            top: 0;
+        }
+
+        to {
+            left: 60vw;
+            top: 10vh;
+        }
     }
 }
 
